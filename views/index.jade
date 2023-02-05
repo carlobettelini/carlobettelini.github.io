@@ -1,0 +1,48 @@
+extends layout
+
+block content
+  h1= title
+  p My portfolio #{title}
+  form(class="about" method="GET" action="/about")
+    input(class="image_edit_button" type="submit" value="About")
+  button(type="button" class="collapsible")
+    h2 Videos
+  div(class="content")
+    div(class="youtube")
+      iframe(id='embedded_element' width="560" height="315" src="https://www.youtube.com/embed/SPgE1Z-nUyE" allowfullscreen)
+      iframe(id='embedded_element' width="560" height="315" src="https://www.youtube.com/embed/2MZvVK18lq0" allowfullscreen)
+    div(class="vimeo")
+      iframe(id="embedded_element" width="560" height="315" src="https://player.vimeo.com/video/330351607?h=e9718e29a7"  allowfullscreen)
+  
+  button(type="button" class="collapsible")
+    h2 Games
+  div(class="content")
+    iframe(id='embedded_element' width="560" height="315" src="https://play.unity.com/webgl/8e81b929-6deb-4839-9901-6d7b00696aaa?screenshot=false&embedType=embed" allowfullscreen="")
+    iframe(id='webgl_iframe' frameborder="0" allow="autoplay; fullscreen; vr" allowfullscreen="" allowvr="" mozallowfullscreen="true" src="https://play.unity.com/webgl/7018b72e-003e-4783-87aa-71b8cdbead20?screenshot=false&embedType=embed"  width="810" height="640" onmousewheel="" webkitallowfullscreen="true")
+  
+  div(class="dino")
+
+    div(class="dino__head")
+      div(class="dino__head__back")
+      div(class="dino__head__topfront")
+      div(class="dino__head__mouth")
+      div(class="dino__head__throat")
+      div(class="dino__head__eye")
+
+    div(class="dino__body")
+      div(class="dino__body__mid")
+      div(class="dino__arm")
+
+    div(class="dino__back-leg")
+
+    div(class="dino__tail")
+
+    div(class="dino__bottom")
+    div(class="dino__bottom__shadow")
+
+    div(class="dino__front-leg")
+
+  div(class="bg")
+    img(src="www.localhost:3000/images/background.jpeg" alt="")
+
+  script(src="/javascripts/utilities.js")
