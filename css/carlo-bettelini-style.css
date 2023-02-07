@@ -1,0 +1,446 @@
+/* Text font */
+@font-face {
+    font-family: 'Moon Flower';
+    src: url('../fonts/moon-flower.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Minion';
+    height: 100%;
+}
+
+p, h1, h2, h3, iframe, audio, #media-container, .info, nav, input, sup {
+    padding: 0 10px;
+}
+
+p {
+    line-height: 180%;
+    letter-spacing: 1.4px;
+    text-indent: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+h1 {
+    font-family: 'Moon Flower';
+    color: navy;
+    font-weight: bold;
+    font-size: 5rem;
+    font-style: normal;
+    text-align: center;
+    margin: 20px;
+    border: 5px dashed blue;
+}
+
+h2 {
+    font-family: 'Moon Flower';
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    background-color: aquamarine;
+}
+
+h3 {
+    background-color: rgb(1, 216, 216);
+    font-family: 'Moon Flower';
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0;
+    padding: 10px 10px 0;
+}
+
+h4 {
+    margin: 0;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 1.6em;
+    font-family: 'Moon Flower';
+    margin: 0;
+}
+
+sup {
+    vertical-align: text-bottom;
+}
+
+ul {
+    padding-top: 20px;
+}
+
+li {
+    padding: 0 10px 10px;
+    font-family: 'Arial';
+    margin: 10px;
+}
+
+li p{
+    margin-left: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+} 
+
+figcaption {
+    font-size: 0.8em;
+}
+
+section {
+    padding-bottom: 10px;
+    margin-bottom: 80px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.input-field p {
+    font-family: 'Arial';
+}
+
+/* Sections */
+#central {   
+    margin-top: auto;  
+    flex: 3 0 auto;                     
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+
+/* Navigation bar */
+#navigation {
+    background: #C8E9A0;
+    border: 2px solid black;
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.current-page{
+    font-size: 2em;
+    font-family: 'Moon Flower';
+    border-top: 3px solid rgb(95, 95, 95);
+    border-right: 3px solid rgb(95, 95, 95);
+    border-bottom: 1px solid rgb(95, 95, 95);
+    border-left: 1px solid rgb(95, 95, 95);
+    background-color: yellowgreen;;
+    padding: 10px;
+}
+
+.page-link {
+    font-size: 2em;
+    font-family: 'Moon Flower';
+    transition: background 250ms;
+    padding: 10px;
+}
+
+.page-link:hover {
+    background-color: yellowgreen;
+    border-left: 3px solid rgb(76, 114, 1);
+    border-bottom: 3px solid rgb(76, 114, 1);
+    border-right: 1px solid rgb(76, 114, 1);
+    border-top: 1px solid rgb(76, 114, 1);
+} 
+
+
+/* Main content */
+#main-content {
+    border: 2px solid black;
+    background: #74c1c4;
+    flex: 8;
+    margin-bottom: 10px;
+}
+
+audio {
+    padding: 10px;
+}
+
+/* Sidebar */
+#sidebar {
+    border: 2px solid black;
+    background: #b57fb2;
+    flex: 2.7;
+    margin-bottom: 10px;
+}
+
+#infos {
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding-right: 5px;
+    transition: background 250ms;
+}
+
+.images-info {
+    margin-right: 10px;
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    max-width: 25px;
+}
+
+#media-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+    transition: background 250ms;
+}
+
+#media-container:hover, .info:hover {
+    background: #f7aff0;
+}
+
+.media-link {
+    visibility: visible;
+}
+
+/* Footer */
+footer {
+    flex-shrink: 0;
+}
+
+footer p {
+    background-color: #e9dea0;
+    font-family: 'Arial';
+    margin-left: 0;
+}
+
+
+/* Expanding text */
+.expanding-text-01 {
+    height: 0;
+    overflow: hidden;
+    transition: height 400ms linear;
+}
+
+.expanding-text-01 p{
+    font-family: 'Arial';
+    text-indent: 0px;
+    line-height: normal;
+}
+
+#toggle-01 {
+    display: none;
+}
+
+#toggle-01:checked ~ .expanding-text-01{
+    height: 100px;
+}
+
+/* The :checked selector matches every checked 
+<input> element (only for radio buttons and checkboxes) 
+and <option> element. */    
+#toggle-01:checked ~ label .arrow-dn { 
+    display: none; 
+}
+
+/* ~ selects all elements that are siblings of a specified element. */
+#toggle-01:checked ~ label .arrow-up { 
+    display: inline-block; 
+}
+
+.expanding-text-02 {
+    height: 0;
+    overflow: hidden;
+    transition: height 400ms linear;
+}
+
+.expanding-text-02 p{
+    font-family: 'Arial';
+    text-indent: 0px;
+    line-height: normal;
+}
+
+#toggle-02 {
+    display: none;
+}
+
+#toggle-02:checked ~ .expanding-text-02{
+    height: 300px;
+}
+
+#toggle-02:checked ~ label .arrow-dn { 
+    display: none; 
+}
+
+#toggle-02:checked ~ label .arrow-up { 
+    display: inline-block; 
+}
+
+.expanding-text-03 {
+    height: 0;
+    overflow: hidden;
+    transition: height 400ms linear;
+}
+
+.expanding-text-03 p{
+    font-family: 'Arial';
+    text-indent: 0px;
+    line-height: normal;
+}
+
+#toggle-03 {
+    display: none;
+}
+
+#toggle-03:checked ~ .expanding-text-03{
+    height: 240px;
+}
+
+#toggle-03:checked ~ label .arrow-dn { 
+    display: none; 
+}
+
+/* ~ selects all elements that are siblings of a specified element. */
+#toggle-03:checked ~ label .arrow-up { 
+    display: inline-block; 
+}
+
+.expanding-text-04 {
+    height: 0;
+    overflow: hidden;
+    transition: height 400ms linear;
+}
+
+.expanding-text-04 p{
+    font-family: 'Arial';
+    text-indent: 0px;
+    line-height: normal;
+}
+
+#toggle-04 {
+    display: none;
+}
+
+#toggle-04:checked ~ .expanding-text-04{
+    height: 500px;
+}
+
+#toggle-04:checked ~ label .arrow-dn { 
+    display: none; 
+}
+
+/* ~ selects all elements that are siblings of a specified element. */
+#toggle-04:checked ~ label .arrow-up { 
+    display: inline-block; 
+}
+
+label .arrow-dn { 
+    display: inline-block; 
+}
+label .arrow-up { 
+    display: none; 
+}
+
+/* The :checked selector matches every checked 
+<input> element (only for radio buttons and checkboxes) 
+and <option> element. */    
+#toggle:checked ~ label .arrow-dn { 
+    display: none; 
+}
+
+/* ~ selects all elements that are siblings of a specified element. */
+#toggle:checked ~ label .arrow-up { 
+    display: inline-block; 
+}
+
+/* Upload form */
+.input-field {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input-field label {
+    font-family: 'Arial';
+}
+
+/* Blog articles */
+.blog-image-1 {
+    float: left;
+    margin: 0 30px 0px 30px;
+    width: 100%;
+    max-width: 240px;
+}
+
+.blog-image-2 {
+    float: right;
+    margin: 30px;
+    margin: 0 30px 0px 30px;
+    width: 100%;
+    max-width: 150px;
+}
+
+/* Gallery images  */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    max-width: 200px;
+    min-width: 80px;
+    transition: 250ms;
+}
+
+figcaption {
+    font-family: 'Arial';
+    font-size: 1em;
+}
+
+.gallery-image figcaption {
+    visibility: hidden;
+}
+
+.gallery-image:hover img{
+    filter: opacity(.5);
+    width: 90%;
+    border: 2px solid black;
+}
+
+.gallery-image:hover figcaption{
+    visibility: visible;
+}
+
