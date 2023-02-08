@@ -362,4 +362,7 @@ audio {
     .media-link {
         visibility: hidden;
     }
+    #footer {
+        justify-content: center;
+    }
 }
