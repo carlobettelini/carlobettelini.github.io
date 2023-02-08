@@ -13,6 +13,7 @@
 
     <header>
         <h1>PORTFOLIO</h1>
+        <h2>Carlo Bettelini Videomaker | Junior Software Developer | .Net Framework | Unity | Adobe Premiere Pro | Vegas Pro</h2>
     </header>
 
     <div id="central">
@@ -22,64 +23,56 @@
                 <div class="page-link">
                     <a href="./about.html">About me</a>
                 </div>
+                <div class="page-link">
+                    <a href="./media.html">Media</a>
+                </div>
+                <div class="page-link">
+                    <a href="./programs.html">Programs</a>
+                </div>
             </nav>
         </div>
         <div id="main-content">
-            <h2>Carlo Bettelini</h2>
-            <section>
-                <h4>Videomaker | Junior Software Developer | .Net Framework | Unity | Adobe Premiere Pro | Vegas Pro</h4>
-            </section>
-            <section>
-                <input type="checkbox" id="toggle-01" />
-                <label for="toggle-01">
-                    <span class='expand'>
-                        <h3>Videos
-                            <span class="arrow-up">▲</span>
-                            <span class="arrow-dn">▼</span>
-                        </h3>
-                    </span>
-                </label>
-                <div class="expanding-text-01">
-                    <iframe width="560" height="315" src="https://player.vimeo.com/video/330351607?h=e9718e29a7" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                    <iframe width="560" height="315" src="https://player.vimeo.com/video/796796368?h=bc1ebb32c9" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2MZvVK18lq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZGicIL4G7ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/SPgE1Z-nUyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FZ5dIuTmxtI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/v9i8m-89CEs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </section>
-            <section>
-                <input type="checkbox" id="toggle-02" />
-                <label for="toggle-02">
-                    <span class='expand'>
-                        <h3>Games
-                            <span class="arrow-up">▲</span>
-                            <span class="arrow-dn">▼</span>
-                        </h3>
-                    </span>
-                </label>
-                <div class="expanding-text-02">
-                    <iframe width="560" height="315" frameborder="0" allow="autoplay; fullscreen; vr" allowfullscreen="" allowvr="" mozallowfullscreen="true" src="https://play.unity.com/webgl/8e81b929-6deb-4839-9901-6d7b00696aaa?screenshot=false&embedType=embed" onmousewheel=""
-                        webkitallowfullscreen="true"></iframe>
-                    <iframe width="560" height="315" frameborder="0" allow="autoplay; fullscreen; vr" allowfullscreen="" allowvr="" mozallowfullscreen="true" src="https://play.unity.com/webgl/7018b72e-003e-4783-87aa-71b8cdbead20?screenshot=false&embedType=embed" onmousewheel=""
-                        webkitallowfullscreen="true"></iframe>
-                </div>
-            </section>
-            <section>
-                <input type="checkbox" id="toggle-03" />
-                <label for="toggle-03">
-                    <span class='expand'>
-                        <h3>Songs
-                            <span class="arrow-up">▲</span>
-                            <span class="arrow-dn">▼</span>
-                        </h3>
-                    </span>
-                </label>
-                <div class="expanding-text-03">
-                    <p>Coming soon</p>
-                </div>
-            </section>
+            <button class="collapsible">Games</button>
+            <div class="content">
+                <iframe id='webgl_iframe' frameborder="0" allow="autoplay; fullscreen; vr" allowfullscreen="" allowvr="" mozallowfullscreen="true" src="https://play.unity.com/webgl/8e81b929-6deb-4839-9901-6d7b00696aaa?screenshot=false&embedType=embed" width="810" height="640"
+                    onmousewheel="" webkitallowfullscreen="true"></iframe>
+                <iframe id='webgl_iframe' frameborder="0" allow="autoplay; fullscreen; vr" allowfullscreen="" allowvr="" mozallowfullscreen="true" src="https://play.unity.com/webgl/7018b72e-003e-4783-87aa-71b8cdbead20?screenshot=false&embedType=embed" width="810" height="640"
+                    onmousewheel="" webkitallowfullscreen="true"></iframe>
+            </div>
+            <button class="collapsible">Director</button>
+            <div class="content">
+                <iframe width="560" height="315" src="https://player.vimeo.com/video/330351607?h=e9718e29a7" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://player.vimeo.com/video/796796368?h=bc1ebb32c9" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/2MZvVK18lq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZGicIL4G7ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/SPgE1Z-nUyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/FZ5dIuTmxtI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/v9i8m-89CEs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <button class="collapsible">Editor</button>
+            <div class="content">
+                <iframe src="https://player.vimeo.com/video/425501366?h=7eb1f697e7" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/425467315?h=df7726f8f6" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <button class="collapsible">Actor</button>
+            <div class="content">
+                <ul>
+                    <li>
+                        <a href="https://www.imdb.com/title/tt5101180/?ref_=nm_flmg_t_1_act">
+                            <p>Flying over the wind</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@Gunterlapsy/featured">
+                            <p>Gunterlapsy</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <button class="collapsible">Songs</button>
+            <div class="content">
+                <p>Coming soon</p>
+            </div>
         </div>
         <div id="sidebar">
             <div id="infos">
@@ -114,6 +107,8 @@
     <footer>
         <p>© Carlo, last page update 7.02.2023</p>
     </footer>
+
+    <script src="./js/script.js"></script>
 
 </body>
 

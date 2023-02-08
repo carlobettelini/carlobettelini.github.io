@@ -67,6 +67,8 @@ h1 {
 }
 
 h2 {
+    margin-top: 0px!important;
+    margin-bottom: 0px!important;
     font-family: 'Poppins-Regular';
     font-size: 1.7rem;
     margin-bottom: 30px;
@@ -133,6 +135,11 @@ a {
     text-decoration: none;
 }
 
+iframe {
+    margin: 20px;
+    min-height: 315px;
+}
+
 .input-field p {
     font-family: 'Roboto-Regular';
 }
@@ -154,8 +161,9 @@ a {
 
 header {
     display: flex;
-    justify-content: center;
-    flex: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* flex: 1; */
 }
 
 
@@ -274,6 +282,46 @@ footer p {
     background-color: #e9dea0;
     font-family: 'Poppins-Regular';
     margin-left: 0;
+}
+
+.collapsible {
+    background-color: #B6CEC7;
+    font-family: 'Poppins-Regular';
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+}
+
+.active,
+.collapsible:hover {
+    background-color: #cbe3dc;
+}
+
+.collapsible:after {
+    content: '\002B';
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow-x: auto;
+    padding: 0 18px;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    background-color: #f1f1f1;
 }
 
 
@@ -410,24 +458,6 @@ and <option> element. */
 
 .input-field label {
     font-family: 'Roboto-Regular';
-}
-
-
-/* Blog articles */
-
-.blog-image-1 {
-    float: left;
-    margin: 0 30px 0px 30px;
-    width: 100%;
-    max-width: 240px;
-}
-
-.blog-image-2 {
-    float: right;
-    margin: 30px;
-    margin: 0 30px 0px 30px;
-    width: 100%;
-    max-width: 150px;
 }
 
 
