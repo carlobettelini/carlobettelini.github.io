@@ -1,13 +1,13 @@
 document.write(`
 
-    <footer>
+    <div id="footer">
         <p>© Carlo Bettelini, last page update 7.02.2023</p>
         <div id="infos">
-            <div class="info"><img src="./images/logos/gmail.png " class="images-info ">
-                <p>carlo.bettelini@gmail.com</p>
+            <div class="info"><img src="./images/logos/gmail.png " class="images-info">
+                <p style="padding-left: 0px; padding-right: 0px;">carlo.bettelini@gmail.com</p>
             </div>
-            <div class="info"><img src="./images/logos/phone.png " class="images-info ">
-                <p>+41 (0) 79 560 14 58</p>
+            <div class="info"><img src="./images/logos/phone.png" class="images-info">
+                <p style="padding-left: 0px; padding-right: 0px;">+41 (0) 79 560 14 58</p>
             </div>
         </div>
         <div id="media-container">
@@ -16,6 +16,6 @@ document.write(`
             <a href="https://www.youtube.com/@TheTehnigga" target="_blank"><img src="./images/logos/youtube.png" alt="Youtube" width="50" height="50"></a>
             <a href="https://www.imdb.com/name/nm7644480/" target="_blank"><img src="./images/logos/imdb.png" alt="IMD" width="50" height="50"></a>
         </div>
-    </footer>
+    </div>
 
 `);
