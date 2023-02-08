@@ -32,20 +32,6 @@ body {
     margin: 0px!important;
 }
 
-p,
-h1,
-h2,
-h3,
-iframe,
-audio,
-#media-container,
-.info,
-nav,
-input,
-sup {
-    padding: 0 10px;
-}
-
 a {
     margin-right: 10px;
 }
@@ -133,13 +119,16 @@ a {
     text-decoration: none;
 }
 
-iframe {
-    min-height: 315px;
-}
 
-button {
-    margin: 0px 0px 40px 0px;
+/* iframe {
+    min-height: 600px;
 }
+*/
+
+
+/* button {
+    margin: 0px 0px 40px 0px;
+} */
 
 .input-field p {
     font-family: 'Roboto-Regular';
