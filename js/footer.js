@@ -1,6 +1,6 @@
 document.write(`
     <div id="footer">
-        <p style="padding: 10px;">© Carlo Bettelini, last page update 9.02.2023</p>
+        <p style="padding: 10px;">© Carlo Bettelini, last page update 5 March 2023</p>
         <div id="infos">
             <a href="mailto:"carlo.bettelini@gmail.com">
                 <div class="info">
