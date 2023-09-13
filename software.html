@@ -13,69 +13,68 @@
     <script src="./js/header.js"></script>
 
     <div id="main-content">
-        <h2>Programs I wrote:</h2>
-        <div id="icon" style="padding-left: 30px;">
-            <img width="50px" style="vertical-align:middle" src="./images/logos/usi.png" alt="">
-            <h3 style="vertical-align:middle; display: inline-block; padding-left: 10px;">USI - Università della Svizzera Italiana</h3>
-        </div>
-        <p style="padding-top: 0px; padding-bottom: 0px;">Here are some of the projects I did during the Bachelor of Computer Science, which fascinated me the most.
-        </p>
-        <h4>Actors Search Engine</h4>
+        <button id="openNav" onclick="w3_open()">&#9776;</button>
+
+        <h3>Actors Search Engine</h3>
         <p style="padding-top: 0px; padding-bottom: 0px;">A search engine for actors using keywords such as their names, movies, birthplace, and a lot more. At the moment it doesn't work anymore because of issues with CORS policy, and I hadn't time to solve it.
         </p>
         <a style="margin-right: 0px;" href=" https://github.com/carlobettelini/actors-search-engine " target="_blank">
             <p>Link to the repo</p>
-        </a> <button class="collapsible ">Screenshots - Click on an image to see it fullscreen</button>
+        </a>
         <div class="content ">
             <a style="margin-right: 0px;" href="./images/actors_search_engine.png " target="_blank">
-                <img style="min-height: 314px; " width="500 " height="314 " src="./images/actors_search_engine.png ">
+                <img id="images" width="500 " height="314 " src="./images/actors_search_engine.png ">
             </a>
             <a style="margin-right: 0px;" href="./images/actors_search_engine_example_1.png " target="_blank">
-                <img style="min-height: 314px; " width="500 " height="314 " src="./images/actors_search_engine_example_1.png ">
+                <img id="images" width="500 " height="314 " src="./images/actors_search_engine_example_1.png ">
             </a>
         </div>
-        <h4>Photo sharing application</h4>
+
+
+
+        <h3>Photo sharing application</h3>
         <p style="padding-top: 0px; padding-bottom: 0px;">Another school project with soem bugs where multiple people can upload simultaneously images and see them scrolling in a presentation, with multiple commands to customize the experience such as adding filters to the images, editing image's informations,
             stopping the presentation, restarting it, showing an image to everyone, etc. Currently working only on local servers.
         </p>
         <a style="margin-right: 0px;" href="https://github.com/carlobettelini/photo-sharing-web-application" target="_blank">
             <p>Link to the repo</p>
         </a>
-        <button class="collapsible ">Screenshots - Click on an image to see it fullscreen</button>
-        <div class="content ">
+       <div class="content ">
             <a style="margin-right: 0px;" href="./images/photo-sharing-application_example_1.png" target="_blank">
-                <img style="min-height: 314px; " width="500" height="314" src="./images/photo-sharing-application_example_1.png">
+                <img id="images" width="500" height="314" src="./images/photo-sharing-application_example_1.png">
             </a>
             <a style="margin-right: 0px;" href="./images/photo-sharing-application_example_2.png" target="_blank">
-                <img style="min-height: 314px; " width="500" height="314" src="./images/photo-sharing-application_example_2.png">
+                <img id="images" width="500" height="314" src="./images/photo-sharing-application_example_2.png">
             </a>
             <a style="margin-right: 0px;" href="./images/photo-sharing-application_example_3.png" target="_blank">
-                <img style="min-height: 314px; " width="500" height="314" src="./images/photo-sharing-application_example_3.png">
+                <img id="images" width="500" height="314" src="./images/photo-sharing-application_example_3.png">
             </a>
             <a style="margin-right: 0px;" href="./images/photo-sharing-application_example_4.png" target="_blank">
-                <img style="min-height: 314px; " width="500" height="314" src="./images/photo-sharing-application_example_4.png">
+                <img id="images" width="500" height="314" src="./images/photo-sharing-application_example_4.png">
             </a>
         </div>
-        <h4>Screenplay generation</h4>
+
+
+
+        <h3>Screenplay generation</h3>
         <p style="padding-top: 0px; padding-bottom: 0px;">I did this project for the thesis, using OpenAI's Davinci model, being the most proficient in understanding human language. It's a screenplay generator: based on an input, the program returns a short screenplay wrote with the standard american
             format. Currently it doesn't work because of the new CORS policy with doesn't allow fetching, but you can access its repo, or seeing some screenshots down here.
         </p>
         <a style="margin-right: 0px;" href="https://github.com/carlobettelini/bachelor-thesis-ml" target="_blank">
             <p>Link to the repo</p>
         </a>
-        <button class="collapsible ">Screenshots - Click on an image to see it fullscreen</button>
         <div class="content ">
             <a style="margin-right: 0px;" href="./images/screenplay_generation_example_1.png" target="_blank">
-                <img style="min-height: 314px; " width="500" height="314" src="./images/screenplay_generation_example_1.png">
+                <img id="images" width="500" height="314" src="./images/screenplay_generation_example_1.png">
             </a>
             <a style="margin-right: 0px;" href="./images/screenplay_generation_example_2.png" target="_blank">
-                <img style="min-height: 314px; " width="500" height="314" src="./images/screenplay_generation_example_2.png">
+                <img id="images" width="500" height="314" src="./images/screenplay_generation_example_2.png">
             </a>
             <a style="margin-right: 0px;" href="./images/screenplay_generation_example_3.png" target="_blank">
-                <img style="min-height: 314px; " width="500" height="314" src="./images/screenplay_generation_example_3.png">
+                <img id="images" width="500" height="314" src="./images/screenplay_generation_example_3.png">
             </a>
             <a style="margin-right: 0px;" href="./images/screenplay_generation_example_4.png" target="_blank">
-                <img style="min-height: 314px; " width="500" height="314" src="./images/screenplay_generation_example_4.png">
+                <img id="images" width="500" height="314" src="./images/screenplay_generation_example_4.png">
             </a>
         </div>
         <div id="empty"></div>

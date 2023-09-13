@@ -13,78 +13,118 @@
     <script src="./js/header.js"></script>
 
     <div id="main-content">
-        <h2>What I do most:</h2>
+        <button id="openNav" onclick="w3_open()">&#9776;</button>
+
         <div id="icon" style="padding-left: 30px;">
             <img width="50px" style="vertical-align:middle" src="./images/logos/games.png" alt="">
             <h3 style="vertical-align:middle; display: inline-block; padding-left: 10px;">GAMES</h3>
         </div>
-        <p style="padding-top: 0px;">So far, I haven't produced many games, but in the future this list will quickly grow!</p>
-        <p style="padding-top: 0px;">👇 Click beneath to see my works 👇</p>
-        <button class=" collapsible">Links to Unity Play</button>
-        <div class="content ">
-            <iframe style="min-height: 640px; " id='webgl_iframe' frameborder="0 " allow="autoplay; fullscreen; vr " allowfullscreen=" " allowvr=" " mozallowfullscreen="true " src="https://play.unity.com/webgl/8e81b929-6deb-4839-9901-6d7b00696aaa?screenshot=false&embedType=embed
-            " width="810 " height="640 " onmousewheel=" " webkitallowfullscreen="true "></iframe>
-            <iframe style="min-height: 640px; " id='webgl_iframe' frameborder="0 " allow="autoplay; fullscreen; vr " allowfullscreen=" " allowvr=" " mozallowfullscreen="true " src="https://play.unity.com/webgl/7018b72e-003e-4783-87aa-71b8cdbead20?screenshot=false&embedType=embed
-            " width="810 " height="640 " onmousewheel=" " webkitallowfullscreen="true "></iframe>
+        <div class="games">
+            <iframe id='webgl_iframe' frameborder="0 " mozallowfullscreen="true "
+                src="https://play.unity.com/webgl/8e81b929-6deb-4839-9901-6d7b00696aaa?screenshot=false&embedType=embed"
+                width="500" onmousewheel=" " webkitallowfullscreen="true "></iframe>
+            <iframe id='webgl_iframe' frameborder="0 " mozallowfullscreen="true "
+                src="https://play.unity.com/webgl/7018b72e-003e-4783-87aa-71b8cdbead20?screenshot=false&embedType=embed"
+                width="500" onmousewheel=" " webkitallowfullscreen="true "></iframe>
+            <iframe id='webgl_iframe' frameborder="0" mozallowfullscreen="true"
+                src="https://play.unity.com/webgl/bc273786-8c66-4110-be13-c235e1d43725?screenshot=false&embedType=embed"
+                width="500" onmousewheel="" webkitallowfullscreen="true"></iframe>
+            <iframe id='webgl_iframe' frameborder="0" mozallowfullscreen="true"
+                src="https://play.unity.com/webgl/91949abf-be27-4a8f-b898-37c9bf7c28d2?screenshot=false&embedType=embed"
+                width="500" onmousewheel="" webkitallowfullscreen="true"></iframe>
         </div>
-        <div id="icon " style="padding-left: 30px; ">
+
+
+
+
+        <div id="icon" style="padding-left: 30px; ">
+            <img width="50px " style="vertical-align:middle " src="./images/logos/movies.png " alt=" ">
+            <h3 style="vertical-align:middle; display: inline-block; padding-left: 10px; ">MOVIES</h3>
+        </div>
+        <div class="content">
+            <iframe style="min-height: 315px; " src="https://player.vimeo.com/video/425501366?h=7eb1f697e7 "
+                width="560 " height="315 " frameborder="0 " allow="autoplay; fullscreen; picture-in-picture "
+                allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/425467315?h=df7726f8f6 " width="560 " height="315 "
+                frameborder="0 " allow="autoplay; fullscreen; picture-in-picture " allowfullscreen></iframe>
+        </div>
+
+
+
+
+        <div id="icon" style="padding-left: 30px; ">
             <img width="50px " style="vertical-align:middle " src="./images/logos/short_film.png " alt=" ">
             <h3 style="vertical-align:middle; display: inline-block; padding-left: 10px; ">SHORTS</h3>
         </div>
-        <p style="padding-top: 0px; ">Some short films I did on my own, or during the triennium at the CISA school.
-        </p>
-        <p style="padding-top: 0px;">👇 Click beneath to see my works 👇</p>
-        <button class="collapsible ">Links to my videos</button>
-        <div class="content ">
-            <iframe width="560 " height="315 " src="https://player.vimeo.com/video/796796368?h=bc1ebb32c9 " frameborder="0 " allow="autoplay; fullscreen; picture-in-picture " allowfullscreen></iframe>
-            <iframe style="min-height: 315px; " width=" 560 " height="315 " src="https://player.vimeo.com/video/330351607?h=e9718e29a7 " frameborder="0 " allow="autoplay; fullscreen; picture-in-picture " allowfullscreen></iframe>
-            <iframe width="560 " height="315 " src="https://www.youtube.com/embed/ZGicIL4G7ck " title="YouTube video player " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share " allowfullscreen></iframe>
-            <iframe width="560 " height="315 " src="https://www.youtube.com/embed/2MZvVK18lq0 " title="YouTube video player " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share " allowfullscreen></iframe>
-            <iframe width="560 " height="315 " src="https://www.youtube.com/embed/FZ5dIuTmxtI " title="YouTube video player " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share " allowfullscreen></iframe>
-            <iframe width="560 " height="315 " src="https://www.youtube.com/embed/v9i8m-89CEs " title="YouTube video player " frameborder="0 " allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share " allowfullscreen></iframe>
-        </div>
-        <div id="icon " style="padding-left: 30px; ">
-            <img width="50px " style="vertical-align:middle " src="./images/logos/editing.png " alt=" ">
-            <h3 style="vertical-align:middle; display: inline-block; padding-left: 10px; ">EDITING</h3>
-        </div>
-        <p style="padding-top: 0px; ">Some films and short films I edited, and some compositing.
-        </p>
-        <p style="padding-top: 0px;">👇 Click beneath to see my works 👇</p>
-        <button class="collapsible ">Links to videos</button>
-        <div class="content ">
-            <iframe style="min-height: 315px; " src="https://player.vimeo.com/video/425501366?h=7eb1f697e7 " width="560 " height="315 " frameborder="0 " allow="autoplay; fullscreen; picture-in-picture " allowfullscreen></iframe>
-            <iframe src="https://player.vimeo.com/video/425467315?h=df7726f8f6 " width="560 " height="315 " frameborder="0 " allow="autoplay; fullscreen; picture-in-picture " allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Uv_PmnvJEIE?start=30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Mm6VdUsh3FY?start=19" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/AludmhZJbOw?start=80" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/W9Gvbc55dbM?start=60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <div id="icon " style="padding-left: 30px; ">
-            <img width="50px " style="vertical-align:middle " src="./images/logos/acting.png " alt=" ">
-            <h3 style="vertical-align:middle; display: inline-block; padding-left: 10px; ">ACTOR</h3>
-        </div>
-        <p style="padding-top: 0px; ">Unfortunately not all of the shorts were I played a part are reachable!
-        </p>
-        <p style="padding-top: 0px;">👇 Click beneath to see my works 👇</p>
-        <button class="collapsible ">Links to videos</button>
-        <div class="content ">
-            <iframe style="min-height: 315px; " width=" 560 " height="315 " src="https://www.youtube.com/embed/2DBS9EyX-M4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/izTbw1Uf9HE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/E0xOsCyKQeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/L_iyxJ8upXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <div id="icon " style="padding-left: 30px; ">
-            <img width="50px " style="vertical-align:middle " src="./images/logos/songs.png " alt=" ">
-            <h3 style="vertical-align:middle; display: inline-block; padding-left: 10px; ">SONGS</h3>
-        </div>
-        <button class="collapsible ">Listen</button>
         <div class="content">
-            <audio controls>
-                <source src="./songs/bed.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+            <!-- Far Away -->
+            <iframe id="shorts" width="400" src="https://player.vimeo.com/video/796796368?h=bc1ebb32c9 "
+                frameborder="0 " allow="autoplay; fullscreen; picture-in-picture " allowfullscreen></iframe>
+            <!-- ODB - Libertà -->
+            <iframe id="shorts" width="400" src="https://player.vimeo.com/video/330351607?h=e9718e29a7 "
+                frameborder="0 " allow="autoplay; fullscreen; picture-in-picture " allowfullscreen></iframe>
+            <!-- Dolls Sight -->
+            <iframe id="shorts" width="400" src="https://www.youtube.com/embed/ZGicIL4G7ck "
+                title="YouTube video player " frameborder="0 "
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share "
+                allowfullscreen></iframe>
+            <!-- ODB - Ti sei perso ragazzo -->
+            <iframe id="shorts" width="400" src="https://www.youtube.com/embed/2MZvVK18lq0 "
+                title="YouTube video player " frameborder="0 "
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share "
+                allowfullscreen></iframe>
+            <!-- Laboratorio tempo -->
+            <iframe id="shorts" width="400" src="https://www.youtube.com/embed/FZ5dIuTmxtI "
+                title="YouTube video player " frameborder="0 "
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share "
+                allowfullscreen></iframe>
+            <!-- Autoritratto -->
+            <iframe id="shorts" width="400" src="https://www.youtube.com/embed/v9i8m-89CEs "
+                title="YouTube video player " frameborder="0 "
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share "
+                allowfullscreen></iframe>
         </div>
+
+
+
+
+        <div id="icon" style="padding-left: 30px; ">
+            <img width="50px " style="vertical-align:middle " src="./images/logos/youtube.png " alt=" ">
+            <h3 style="vertical-align:middle; display: inline-block; padding-left: 10px; ">YOUTUBE</h3>
+        </div>
+        <div class="content">
+            <!-- La grappa di Gunter -->
+            <iframe id="shorts" width=" 400" src="https://www.youtube.com/embed/8K_QNIkHaUs?si=LnFyf005CT7zomGs"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <!-- L'ingrediente segreto -->
+            <iframe id="shorts" width=" 400" src="https://www.youtube.com/embed/E0xOsCyKQeE?si=Lntpzoi08Sz2c0lE"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <!-- Trip -->
+            <iframe id="shorts" width=" 400" src="https://www.youtube.com/embed/Uv_PmnvJEIE?start=30"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <!-- No way out -->
+            <iframe id="shorts" width=" 400" src="https://www.youtube.com/embed/Mm6VdUsh3FY?start=19"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <!-- Favij Simulator -->
+            <iframe id="shorts" width=" 400" src="https://www.youtube.com/embed/AludmhZJbOw?start=80"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <!-- Gunterlapsy -->
+            <iframe id="shorts" width=" 400" src="https://www.youtube.com/embed/izTbw1Uf9HE?si=wxFn_TGVEqFmpWs6"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+
         <div id="empty"></div>
     </div>
     </div>
