@@ -249,40 +249,32 @@ audio {
     flex-shrink: 0;
 }
 
-.collapsible {
-    background-color: #e0f1f5;
-    font-family: 'Poppins-Regular';
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    padding: 30px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-}
-
-.active,
-.collapsible:hover {
-    background-color: #cbe3dc;
-}
-
-.collapsible:after {
-    content: '\002B';
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-}
-
-.active:after {
-    content: "\2212";
-}
 
 #icon {
     padding-top: 80px;
 }
 
 .games {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 30px;
+    max-height: 680px;
+    overflow-x: auto;
+}
+
+.shorts {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0px;
+    padding-left: 30px;
+    max-height: 680px;
+    overflow-x: auto;
+}
+
+.gifs {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -309,7 +301,11 @@ audio {
     flex-direction: row;
     gap: 10px;
     overflow-x: auto;
-    max-height: 680px;
+    /* max-height: 680px; */
+}
+
+#gif {
+    max-width: 400px;
 }
 
 #openNav {
@@ -317,6 +313,7 @@ audio {
     border-width: 0px;
     width: 100px;
     height: 80px;
+    transition: 200ms;
     background-color: white;
     display: inline-block;
     padding-left: 20px;
@@ -347,6 +344,67 @@ audio {
     border-color: #c2c1c1;
 }
 
+.title {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+
+.info-movie {
+    padding-bottom: 30px;
+    padding-top: 0px;
+    /* width: 560px; */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#info {
+    padding-bottom: 20px;
+}
+
+.details {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+
+.collapsible {
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 560px;
+    border: none;
+    transition: background 250ms;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #d2d2d2;
+  }
+  
+  .collapsible:after {
+    content: '\002B';
+    color: black;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .additional-infos {
+   width: 560px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: transparent;
+  }
 
 
 @media all and (min-width: 1055px) {
@@ -405,6 +463,14 @@ audio {
         flex-direction: column;
         justify-content: center;
     }
+
+    #gif {
+        max-width: 200px;
+    }
+
+    .gifs {
+        max-height: 400px;
+    }
 }
 
 @media all and (max-width: 700px) {
@@ -442,8 +508,13 @@ audio {
         gap: 0px;
         flex-wrap: wrap;
         flex-direction: column;
-        max-height: 400px;
+        max-height: 560px;
     }
+
+    .collapsible {
+        visibility: hidden;
+    }
+
 }
 
 
@@ -488,8 +559,20 @@ audio {
 
     .content {
         gap: 0px;
-        max-height: 400px;
+        max-height: 560px;
         flex-wrap: wrap;
         flex-direction: column;
+    }
+
+    .collapsible {
+        visibility: hidden;
+    }
+
+    #gif {
+        max-width: 200px;
+    }
+
+    .gifs {
+        max-height: 400px;
     }
 }
