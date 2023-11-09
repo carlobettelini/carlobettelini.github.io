@@ -280,7 +280,7 @@ audio {
     flex-direction: column;
     gap: 10px;
     padding-left: 30px;
-    max-height: 680px;
+    max-height: 315px;
     overflow-x: auto;
 }
 
@@ -465,7 +465,7 @@ audio {
     }
 
     #gif {
-        max-width: 200px;
+        max-width: none;
     }
 
     .gifs {
@@ -569,7 +569,7 @@ audio {
     }
 
     #gif {
-        max-width: 200px;
+        max-width: none;
     }
 
     .gifs {
