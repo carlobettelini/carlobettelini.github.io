@@ -1,0 +1,2499 @@
+/* ROOT STYLES FOR VARIABLES */
+:root {
+    --system-ui: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --fontPoppins: 'Poppins', sans-serif;
+
+    --borderRadius: 3.125rem;
+    --borderRadius: 0.678em;
+}
+
+/* ROOT STYLES FOR VARIABLES */
+
+/* PAGE RESET STYLES */
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    outline: 0.063em solid rgba(0, 0, 0, 0);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+html,
+body {
+    min-height: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    border-spacing: 0em;
+}
+
+html {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+body.darkTheme {
+    background: rgba(25, 27, 34, 1);
+}
+
+body.lightTheme {
+    background: rgba(235, 236, 240, 1);
+}
+
+/* PAGE RESET STYLES */
+
+.button-shiny {
+    position: relative;
+    display: inline-block;
+    padding: .718rem 1.618rem;
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 1px;
+    /* text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8), 0 -1px 2px rgba(0, 0, 0, 0.2);*/
+    background: rgba(67, 67, 67, 1);
+    border: 1px solid rgba(0, 0, 0, .35);
+    border-radius: var(--borderRadius);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.25),
+        0 1px 0 rgba(255, 255, 255, 0.25) inset,
+        0 0 0 rgba(0, 0, 0, 0.5) inset,
+        0 1.10em 0 rgba(255, 255, 255, 0.25) inset,
+        0 -1.10em 1.25em rgba(0, 0, 0, 0.32) inset,
+        0 1.10rem 1.25em rgba(255, 255, 255, 0.05) inset,
+        0 1.10em 6px rgba(255, 255, 255, .1) inset;
+
+    transition: all 150ms linear 0s;
+
+    text-transform: uppercase;
+    font-family: var(--fontPoppins);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    margin: 0.618rem;
+
+    /* solution fixes border radius issue, uses a clever margin overflow style */
+    /* 
+	overflow: clip;
+    overflow-clip-margin: content-box;
+	*/
+
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny:hover {
+    border-bottom: 4px solid rgba(0, 0, 0, .55);
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow:
+        0 5px 6px rgba(0, 0, 0, 0.16),
+        0 1px 0 rgba(255, 255, 255, 0.25) inset,
+        0 0 0 rgba(0, 0, 0, 0.25) inset,
+        0 20px 0 rgba(255, 255, 255, 0.04) inset,
+        0 -20px 20px rgba(0, 0, 0, 0.32) inset,
+        0 20px 20px rgba(255, 255, 255, 0.07) inset;
+}
+
+.darkTheme .button-shiny:hover {
+    border-bottom: 3px solid rgba(0, 0, 0, .55);
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow:
+        0 5px 6px rgba(0, 0, 0, 0.25),
+        0 1px 0 rgba(255, 255, 255, 0.25) inset,
+        0 0 0 rgba(0, 0, 0, 0.25) inset,
+        0 20px 0 rgba(255, 255, 255, 0.04) inset,
+        0 -20px 20px rgba(0, 0, 0, 0.32) inset,
+        0 20px 20px rgba(255, 255, 255, 0.07) inset;
+}
+
+.button-shiny:active {
+    border-bottom: 0px solid rgba(0, 0, 0, .55);
+    box-shadow:
+        1px 1px 1px rgba(255, 255, 255, .85),
+        0 1px 0 rgba(255, 255, 255, 0.25),
+        0 1px 0 rgba(255, 255, 255, 0) inset,
+        0 0 5px rgba(0, 0, 0, 0.4) inset,
+        0 20px 0 rgba(255, 255, 255, 0.03) inset,
+        0 -20px 20px rgba(0, 0, 0, 0.25) inset,
+        0 20px 20px rgba(255, 255, 255, 0.05) inset;
+
+    -webkit-filter: saturate(120%);
+    filter: saturate(120%);
+}
+
+.darkTheme .button-shiny:active {
+    border-bottom: 0px solid rgba(0, 0, 0, .62);
+    box-shadow:
+        1px 1px 1px rgba(255, 255, 255, .1),
+        0 1px 0 rgba(255, 255, 255, 0.25),
+        0 1px 0 rgba(255, 255, 255, 0) inset,
+        0 0 5px rgba(0, 0, 0, 0.4) inset,
+        0 20px 0 rgba(255, 255, 255, 0.03) inset,
+        0 -20px 20px rgba(0, 0, 0, 0.25) inset,
+        0 20px 20px rgba(255, 255, 255, 0.05) inset;
+
+    -webkit-filter: saturate(120%);
+    filter: saturate(120%);
+}
+
+.button-shiny:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: inherit;
+    background: -moz-linear-gradient(left,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear,
+            left top,
+            right top,
+            color-stop(0%, rgba(255, 255, 255, 0)),
+            color-stop(50%, rgba(255, 255, 255, 1)),
+            color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(left,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(left,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    padding: x 12px;
+    top: 0;
+    left: 9%;
+    height: 1.5px;
+    width: 50%;
+    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.2);
+    opacity: .6;
+    transition: all 150ms ease-in-out 0s;
+}
+
+.button-shiny:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: inherit;
+    background: -moz-linear-gradient(left,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear,
+            left top,
+            right top,
+            color-stop(0%, rgba(255, 255, 255, 0)),
+            color-stop(50%, rgba(255, 255, 255, 1)),
+            color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(left,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(left,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    padding: x 12px;
+    bottom: 0;
+    right: 12%;
+    height: 1.5px;
+    width: 40%;
+    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.2);
+    opacity: .2;
+    transition: all 150ms ease-in-out 0s;
+}
+
+.button-shiny:active:before,
+.button-shiny:hover:active:before,
+.button-shiny:active:after,
+.button-shiny:hover:active:after {
+    opacity: 0;
+}
+
+.button-shiny:hover:before {
+    left: 45%;
+    opacity: 1;
+}
+
+.button-shiny:hover:after {
+    right: 55%;
+    opacity: .3;
+}
+
+.button-shiny .shine {
+    content: "";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    border-radius: inherit;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: inherit;
+    background: linear-gradient(-115deg,
+            transparent 20%,
+            rgba(183, 183, 183, 0.25) 26%,
+            transparent 32%),
+        linear-gradient(-115deg,
+            transparent 20%,
+            rgba(255, 255, 255, 0.18) 35%,
+            transparent 48%);
+
+    background-size: 400% 800%, 400% 1200%;
+
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+
+    transition: all 150ms ease-in-out 0s;
+
+    background-blend-mode: color-burn, overlay;
+    mix-blend-mode: color-dodge;
+    z-index: 0;
+
+    animation: buttonGradientMove 13s infinite;
+    -webkit-animation: buttonGradientMove 13s infinite;
+    animation-play-state: running;
+    opacity: 1;
+}
+
+.button-shiny:hover .shine,
+.button-shiny:active .shine {
+    animation-play-state: paused;
+    opacity: 0;
+}
+
+.button-shiny.gray {
+    background: rgba(85, 85, 85, 1);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.dark-gray {
+    background: rgba(51, 51, 51, 1);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.red {
+    background: rgba(255, 0, 0, 1);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.dark-red {
+    background: rgba(204, 0, 0, 1);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.green {
+    background: rgba(0, 151, 0, 1);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.blue {
+    background: rgba(0, 0, 255, 1);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.pale-blue {
+    background: rgba(58, 97, 126, 1);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.pale-blue-two {
+    background: rgba(42, 93, 134, 1);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.orange {
+    background: rgba(238, 85, 0, 1);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.purple {
+    background: rgba(153, 0, 153, 1);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.light {
+    color: rgba(113, 119, 144, 1);
+    background: rgba(235, 236, 237, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.2);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.light:before {
+    -webkit-filter: brightness(200%) saturate(200%);
+    filter: brightness(200%) saturate(200%);
+    mix-blend-mode: screen;
+}
+
+.button-shiny.silver {
+    color: rgba(94, 97, 108, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(90deg,
+            rgba(224, 227, 232, 1) 0%,
+            rgba(192, 194, 196, 1) 100%);
+
+    background: radial-gradient(100% 100% at 50% 15%,
+            rgba(255, 255, 255, 1),
+            rgba(143, 149, 163, 1) 80%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.chrome {
+    color: rgba(237, 255, 255, 1);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.95), 0 -1px 2px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(180deg,
+            rgba(125, 162, 207, 1) 7%,
+            rgba(183, 204, 225, 1) 35%,
+            rgba(220, 231, 247, 1) 42%,
+            rgba(94, 85, 78, 1) 40%,
+            rgba(200, 193, 177, 1) 93%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.gold {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(180deg,
+            rgba(238, 204, 102, 1) 0%,
+            rgba(223, 155, 67, 1) 100%);
+
+    background: radial-gradient(100% 100% at 50% 15%,
+            rgba(238, 204, 102, 1),
+            rgba(223, 155, 67, 1) 80%);
+
+    background: radial-gradient(100% 100% at 50% 13%,
+            rgba(254, 231, 163, 1) 0%,
+            rgba(241, 209, 124, 1) 20%,
+            rgba(191, 146, 45, 1) 80%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.rose {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(180deg,
+            rgba(245, 168, 150, 1) 0%,
+            rgba(210, 131, 114, 1) 100%);
+
+    background: radial-gradient(100% 100% at 50% 15%,
+            rgba(245, 168, 150, 1),
+            rgba(210, 131, 114, 1) 80%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.bronze {
+    background: linear-gradient(180deg,
+            rgba(171, 124, 48, 1) 0%,
+            rgba(142, 94, 35, 1) 100%);
+
+    background: radial-gradient(100% 100% at 50% 15%,
+            rgba(171, 124, 48, 1),
+            rgba(142, 94, 35, 1) 80%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.copper {
+    background: linear-gradient(180deg,
+            rgba(234, 124, 65, 1) 0%,
+            rgba(215, 92, 61, 1) 100%);
+
+    background: radial-gradient(100% 100% at 50% 15%,
+            rgba(234, 124, 65, 1),
+            rgba(215, 92, 61, 1) 80%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.rainbow {
+    background: linear-gradient(45deg,
+            rgba(158, 209, 16, 1),
+            rgba(80, 181, 23, 1),
+            rgba(23, 144, 103, 1),
+            rgba(71, 110, 175, 1),
+            rgba(159, 73, 172, 1),
+            rgba(204, 66, 162, 1),
+            rgba(255, 59, 167, 1),
+            rgba(255, 88, 0, 1),
+            rgba(255, 129, 0, 1),
+            rgba(254, 172, 0, 1),
+            rgba(255, 204, 0, 1),
+            rgba(237, 230, 4, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.morning-sky {
+    color: rgba(94, 97, 108, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(rgba(198, 228, 238, 1) 0%,
+            rgba(198, 228, 238, 1) 40%,
+            rgba(254, 209, 174, 1) 60%,
+            rgba(250, 160, 185, 1) 70%,
+            rgba(203, 125, 203, 1) 80%,
+            rgba(117, 126, 203, 1) 110%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.molten {
+    background: radial-gradient(100% 100% at 50% 15%,
+            rgba(255, 237, 0, 1),
+            rgba(255, 0, 0, 1) 93%);
+
+    background: radial-gradient(100% 100% at 50% 15%,
+            rgba(255, 237, 0, 1),
+            rgba(253, 59, 24, 1) 65%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.purple-pink {
+    background: linear-gradient(rgba(39, 22, 35, 1) 0%,
+            rgba(19, 6, 15, 1) 100%),
+        radial-gradient(40% 75% at 30% 13%,
+            rgba(60, 48, 86, 1) 0%, transparent 80%),
+        radial-gradient(40% 75% at 70% 87%,
+            rgba(78, 16, 38, 1) 0%, transparent 80%);
+
+    background-blend-mode: color-dodge, color-dodge, color-dodge;
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.night-sky {
+    background: radial-gradient(100% 100% at 50% 15%,
+            rgba(152, 46, 82, 1) 15%,
+            rgba(31, 37, 95, 1) 55%,
+            rgba(12, 22, 47, 1) 100%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.bright {
+    background: linear-gradient(45deg,
+            hsl(240deg 100% 20%) 0%,
+            hsl(289deg 100% 21%) 11%,
+            hsl(315deg 100% 27%) 22%,
+            hsl(329deg 100% 36%) 33%,
+            hsl(337deg 100% 43%) 44%,
+            hsl(357deg 91% 59%) 56%,
+            hsl(17deg 100% 59%) 67%,
+            hsl(34deg 100% 53%) 78%,
+            hsl(45deg 100% 50%) 89%,
+            hsl(55deg 100% 50%) 100%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.grass {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.2);
+    background-image: linear-gradient(45deg,
+            rgba(133, 255, 189, 1) 0%,
+            rgba(255, 251, 125, 1) 100%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.pink-green {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(115deg,
+            rgba(250, 139, 255, 1) 0%,
+            rgba(43, 210, 255, 1) 52%,
+            rgba(43, 255, 136, 1) 90%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.maroon {
+    background: linear-gradient(rgba(246, 85, 153, 1),
+            rgba(77, 3, 22, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.midnight {
+    background: linear-gradient(rgba(29, 78, 216, 1),
+            rgba(30, 64, 175, 1),
+            rgba(17, 24, 39, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.witch {
+    background: conic-gradient(at right top,
+            rgba(15, 23, 42, 1),
+            rgba(88, 28, 135, 1),
+            rgba(15, 23, 42, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.powerpuff {
+    background: linear-gradient(to right top,
+            rgba(56, 189, 248, 1),
+            rgba(251, 113, 133, 1),
+            rgba(163, 230, 53, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.coral {
+    background: linear-gradient(rgba(251, 146, 60, 1),
+            rgba(251, 113, 133, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.hyper {
+    background: linear-gradient(to top,
+            rgba(236, 72, 153, 1),
+            rgba(239, 68, 68, 1),
+            rgba(234, 179, 8, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.cottoncandy {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(rgba(249, 168, 212, 1),
+            rgba(216, 180, 254, 1),
+            rgba(129, 140, 248, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.blue-purple {
+    background: linear-gradient(180deg,
+            rgba(67, 203, 255, 1) 10%,
+            rgba(151, 8, 204, 1) 100%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.blue-green {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(180deg,
+            rgba(240, 255, 0, 1) 10%,
+            rgba(88, 207, 251, 1) 100%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.purple-pink-two {
+    background: linear-gradient(145deg,
+            rgba(255, 0, 118, 1),
+            rgba(89, 15, 183, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.blue-two {
+    background: linear-gradient(180deg,
+            rgba(11, 99, 246, 1),
+            rgba(0, 60, 197, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.pink-orange {
+    background: linear-gradient(145deg,
+            rgba(226, 51, 255, 1),
+            rgba(255, 107, 0, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.orange-two {
+    background: linear-gradient(180deg,
+            rgba(255, 193, 7, 1) 0%,
+            rgba(255, 87, 34, 1) 100%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.green-two {
+    background: linear-gradient(33deg,
+            rgba(84, 227, 142, 1),
+            rgba(65, 199, 175, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.tropical {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(145deg,
+            rgba(253, 235, 130, 1),
+            rgba(247, 143, 173, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.rainbow-two {
+    background:
+        linear-gradient(rgba(0, 255, 255, 1)
+            /* cyan */
+            ,
+            transparent),
+        linear-gradient(-45deg,
+            rgba(255, 0, 255, 1)
+            /* magenta */
+            ,
+            transparent),
+        linear-gradient(45deg,
+            rgba(255, 255, 0, 1)
+            /* yellow */
+            ,
+            transparent);
+    background-blend-mode: multiply;
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.sunset {
+    background: linear-gradient(0deg,
+            rgba(255, 165, 0, 0.6),
+            rgba(0, 0, 255, 0.6));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.cd {
+    --conicAngle: 130deg;
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+    background: conic-gradient(from var(--conicAngle) at 50% 50%, rgba(255, 255, 255, 1),
+            rgba(245, 225, 246, 1),
+            rgba(255, 239, 209, 1),
+            rgba(254, 254, 197, 1),
+            rgba(200, 200, 200, 1),
+            rgba(138, 138, 138, 1),
+            rgba(96, 88, 89, 1),
+            rgba(112, 72, 100, 1),
+            rgba(59, 73, 172, 1),
+            rgba(49, 200, 222, 1),
+            rgba(108, 211, 153, 1),
+            rgba(208, 208, 208, 1),
+            rgba(252, 252, 252, 1),
+            rgba(255, 255, 255, 1),
+            rgba(255, 255, 255, 1),
+            rgba(234, 250, 233, 1),
+            rgba(163, 255, 239, 1),
+            rgba(152, 188, 234, 1),
+            rgba(153, 151, 164, 1),
+            rgba(134, 134, 134, 1),
+            rgba(118, 118, 118, 1),
+            rgba(240, 237, 91, 1),
+            rgba(226, 163, 167, 1),
+            rgba(212, 212, 212, 1),
+            rgba(255, 255, 255, 1),
+            rgba(255, 255, 255, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.cd:hover {
+    transition: all 150ms linear 0s;
+
+    -webkit-filter: saturate(110%) brightness(1.1);
+    filter: saturate(110%) brightness(1.1);
+
+    animation: cdRotate 130ms ease forwards;
+    -webkit-animation: cdRotate 130ms ease forwards;
+
+    border-radius: var(--borderRadius);
+}
+
+.button-shiny.cd-two {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+    background: conic-gradient(from -218deg at 50% 50%,
+            rgba(240, 240, 240, 1),
+            /* white lights */
+            rgba(240, 240, 240, 1),
+            /* white lights */
+            rgba(219, 217, 231, 1),
+            /* light neutral */
+            rgba(219, 217, 231, 1),
+            /* light neutral */
+            rgba(124, 125, 131, 1),
+            /* dark neutral */
+            rgba(164, 167, 186, 1),
+            /* dark neutral */
+            rgba(204, 196, 255, 1),
+            /* purple */
+            rgba(189, 237, 255, 1),
+            /* blue */
+            rgba(189, 237, 255, 1),
+            /* blue */
+            rgba(189, 237, 255, 1),
+            /* blue */
+            rgba(189, 237, 255, 1),
+            /* blue */
+            rgba(189, 255, 251, 1),
+            /* aqua */
+            rgba(245, 244, 216, 1),
+            /* yellow */
+            rgba(226, 180, 209, 1),
+            /* pink */
+            rgba(164, 167, 186, 1),
+            /* dark neutral */
+            rgba(164, 167, 186, 1),
+            /* dark neutral */
+            rgba(219, 217, 231, 1),
+            /* light neutral */
+            rgba(219, 217, 231, 1),
+            /* light neutral */
+            rgba(240, 240, 240, 1),
+            /* white lights */
+            rgba(240, 240, 240, 1),
+            /* white lights */
+            rgba(219, 217, 231, 1),
+            /* light neutral */
+            rgba(219, 217, 231, 1),
+            /* light neutral */
+            rgba(164, 167, 186, 1),
+            /* dark neutral */
+            rgba(164, 167, 186, 1),
+            /* dark neutral */
+            rgba(204, 196, 255, 1),
+            /* purple */
+            rgba(189, 237, 255, 1),
+            /* blue */
+            rgba(189, 255, 251, 1),
+            /* aqua */
+            rgba(245, 244, 216, 1),
+            /* yellow */
+            rgba(245, 244, 216, 1),
+            /* yellow */
+            rgba(245, 244, 216, 1),
+            /* yellow */
+            rgba(245, 244, 216, 1),
+            /* yellow */
+            rgba(226, 180, 209, 1),
+            /* pink */
+            rgba(164, 167, 186, 1),
+            /* dark neutral */
+            rgba(164, 167, 186, 1),
+            /* dark neutral */
+            rgba(219, 217, 231, 1),
+            /* light neutral */
+            rgba(219, 217, 231, 1),
+            /* light neutral */
+            rgba(240, 240, 240, 1),
+            /* white lights */
+            rgba(240, 240, 240, 1)
+            /* white lights */
+        );
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny:hover.cd-two {
+    -webkit-filter: saturate(110%) brightness(1.1);
+    filter: saturate(110%) brightness(1.1);
+}
+
+.button-shiny.purple-orange {
+    background: linear-gradient(135deg,
+            rgba(78, 20, 141, 1) 0%,
+            rgba(150, 64, 175, 1) 33.33%,
+            rgba(201, 89, 125, 1) 66.66%,
+            rgba(255, 97, 7, 1) 100%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.sunrise {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+
+    background: radial-gradient(100% 100% at 50% 15%,
+            rgb(255, 230, 205, 1) 40%,
+            rgb(248, 200, 249, 1) 110%);
+
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.blue-three {
+    background: radial-gradient(100% 100% at 50% 15%,
+            rgb(35, 199, 251, 1) 15%,
+            rgb(87, 43, 201, 1) 85%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.metal {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+
+    background: conic-gradient(from -233deg at 50% 50%,
+            rgba(179, 186, 191, 1),
+            /* darker gray */
+            rgba(179, 186, 191, 1),
+            /* darker gray */
+            rgba(202, 210, 213, 1),
+            /* slight light */
+            rgba(179, 186, 191, 1),
+            /* darker gray */
+            rgba(179, 186, 191, 1),
+            /* darker gray */
+            rgba(179, 186, 191, 1),
+            /* darker gray */
+            rgba(195, 202, 206, 1),
+            /* slight light two */
+            rgba(195, 202, 206, 1),
+            /* slight light two */
+            rgba(244, 244, 244, 1),
+            /* white light */
+            rgba(244, 244, 244, 1),
+            /* white light */
+            rgba(195, 202, 206, 1),
+            /* slight light two */
+            rgba(195, 202, 206, 1),
+            /* slight light two */
+            rgba(179, 186, 191, 1),
+            /* darker gray */
+            rgba(179, 186, 191, 1),
+            /* darker gray */
+
+            rgba(172, 177, 181, 1),
+            /* darker gray */
+            rgba(172, 177, 181, 1),
+            /* darker gray */
+            rgba(202, 210, 213, 1),
+            /* slight light */
+            rgba(179, 186, 191, 1),
+            /* darker gray */
+            rgba(179, 186, 191, 1),
+            /* darker gray */
+            rgba(179, 186, 191, 1),
+            /* darker gray */
+            rgba(195, 202, 206, 1),
+            /* slight light two */
+            rgba(195, 202, 206, 1),
+            /* slight light two */
+            rgba(244, 244, 244, 1),
+            /* white light */
+            rgba(244, 244, 244, 1),
+            /* white light */
+            rgba(195, 202, 206, 1),
+            /* slight light two */
+            rgba(195, 202, 206, 1),
+            /* slight light two */
+            rgba(172, 177, 181, 1),
+            /* darker gray */
+            rgba(172, 177, 181, 1),
+            /* darker gray */
+
+            rgba(179, 186, 191, 1),
+            /* darker gray */
+            rgba(179, 186, 191, 1),
+            /* darker gray */
+            rgba(202, 210, 213, 1),
+            /* slight light */
+            rgba(179, 186, 191, 1),
+            /* darker gray */
+            rgba(172, 177, 181, 1),
+            /* darker gray */
+            rgba(172, 177, 181, 1),
+            /* darker gray */
+            rgba(195, 202, 206, 1),
+            /* slight light two */
+            rgba(195, 202, 206, 1),
+            /* slight light two */
+            rgba(195, 202, 206, 1),
+            /* slight light two */
+            rgba(195, 202, 206, 1),
+            /* slight light two */
+            rgba(172, 177, 181, 1),
+            /* darker gray */
+            rgba(172, 177, 181, 1),
+            /* darker gray */
+
+            rgba(179, 186, 191, 1),
+            /* darker gray */
+            rgba(179, 186, 191, 1),
+            /* darker gray */
+            rgba(202, 210, 213, 1),
+            /* slight light */
+            rgba(179, 186, 191, 1),
+            /* darker gray */
+            rgba(179, 186, 191, 1),
+            /* darker gray */
+            rgba(179, 186, 191, 1),
+            /* darker gray */
+            rgba(195, 202, 206, 1),
+            /* slight light two */
+            rgba(195, 202, 206, 1),
+            /* slight light two */
+            rgba(244, 244, 244, 1),
+            /* white light */
+            rgba(244, 244, 244, 1),
+            /* white light */
+            rgba(195, 202, 206, 1),
+            /* slight light two */
+            rgba(195, 202, 206, 1),
+            /* slight light two */
+            rgba(179, 186, 191, 1),
+            /* darker gray */
+            rgba(179, 186, 191, 1)
+            /* darker gray */
+        );
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny:hover.metal {
+    -webkit-filter: saturate(110%) brightness(1.15);
+    filter: saturate(110%) brightness(1.15);
+}
+
+.button-shiny.gold-two {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.2);
+
+    background: conic-gradient(from -580deg at 50% 50%,
+            rgba(250, 216, 153, 1),
+            rgba(250, 216, 153, 1),
+            rgba(225, 185, 113, 1),
+            rgba(212, 168, 93, 1),
+            rgba(162, 106, 13, 1),
+            rgba(180, 128, 43, 1),
+            rgba(235, 179, 86, 1),
+            rgba(254, 197, 104, 1),
+            rgba(197, 141, 48, 1),
+            rgba(161, 104, 11, 1),
+            rgba(196, 154, 82, 1),
+            rgba(230, 200, 150, 1),
+            rgba(251, 228, 193, 1),
+            rgba(251, 228, 193, 1),
+            rgba(218, 176, 101, 1),
+            rgba(196, 138, 38, 1),
+            rgba(196, 138, 38, 1),
+            rgba(196, 138, 38, 1),
+            rgba(254, 198, 105, 1),
+            rgba(254, 198, 105, 1),
+            rgba(254, 198, 105, 1),
+            rgba(174, 119, 40, 1),
+            rgba(174, 119, 40, 1),
+            rgba(131, 74, 3, 1),
+            rgba(131, 74, 3, 1),
+            rgba(177, 131, 64, 1),
+            rgba(177, 131, 64, 1),
+            rgba(225, 185, 113, 1),
+            rgba(250, 216, 153, 1));
+
+    background: conic-gradient(from -706deg at 50% 50%,
+            rgba(242, 203, 146, 1),
+            rgba(242, 203, 146, 1),
+            rgba(167, 119, 71, 1),
+            rgba(167, 119, 71, 1),
+            rgba(167, 119, 71, 1),
+            rgba(253, 231, 182, 1),
+            rgba(253, 231, 182, 1),
+            rgba(223, 187, 137, 1),
+            rgba(223, 187, 137, 1),
+            rgba(223, 187, 137, 1),
+            rgba(223, 187, 137, 1),
+            rgba(168, 120, 72, 1),
+            rgba(168, 120, 72, 1),
+            rgba(168, 120, 72, 1),
+            rgba(168, 120, 72, 1),
+            rgba(199, 151, 91, 1),
+            rgba(199, 151, 91, 1),
+            rgba(253, 234, 182, 1),
+            rgba(253, 234, 182, 1),
+            rgba(221, 183, 128, 1),
+            rgba(221, 183, 128, 1),
+            rgba(201, 153, 93, 1),
+            rgba(201, 153, 93, 1),
+            rgba(201, 153, 93, 1),
+            rgba(242, 203, 146, 1),
+            rgba(242, 203, 146, 1));
+
+    background: conic-gradient(from -711deg at 50% 50%,
+            rgba(226, 198, 135, 1),
+            rgba(250, 229, 174, 1),
+            rgba(226, 198, 135, 1),
+            rgba(203, 160, 92, 1),
+
+            rgba(214, 169, 93, 1),
+            rgba(196, 142, 56, 1),
+            rgba(196, 142, 56, 1),
+            rgba(214, 169, 93, 1),
+
+            rgba(203, 160, 92, 1),
+            rgba(226, 198, 135, 1),
+            rgba(250, 229, 174, 1),
+            rgba(226, 198, 135, 1),
+            rgba(203, 160, 92, 1),
+
+            rgba(214, 169, 93, 1),
+            rgba(196, 142, 56, 1),
+            rgba(196, 142, 56, 1),
+            rgba(214, 169, 93, 1),
+
+            rgba(203, 160, 92, 1),
+            rgba(226, 198, 135, 1),
+            rgba(250, 229, 174, 1),
+            rgba(226, 198, 135, 1),
+            rgba(203, 160, 92, 1),
+
+            rgba(214, 169, 93, 1),
+            rgba(196, 142, 56, 1),
+            rgba(196, 142, 56, 1),
+            rgba(214, 169, 93, 1),
+
+            rgba(203, 160, 92, 1),
+            rgba(226, 198, 135, 1),
+            rgba(250, 229, 174, 1),
+            rgba(226, 198, 135, 1),
+            rgba(203, 160, 92, 1),
+
+            rgba(214, 169, 93, 1),
+            rgba(196, 142, 56, 1),
+            rgba(196, 142, 56, 1),
+            rgba(214, 169, 93, 1),
+
+            rgba(203, 160, 92, 1),
+            rgba(203, 160, 92, 1));
+
+    background: conic-gradient(from -346deg at 50% 50%,
+            rgba(248, 208, 149, 1),
+            rgba(218, 176, 118, 1),
+            rgba(167, 119, 71, 1),
+            rgba(215, 183, 134, 1),
+            rgba(255, 234, 185, 1),
+            rgba(223, 190, 139, 1),
+            rgba(165, 117, 68, 1),
+            rgba(206, 160, 100, 1),
+            rgba(255, 233, 183, 1),
+            rgba(222, 185, 131, 1),
+            rgba(201, 152, 92, 1),
+            rgba(233, 199, 148, 1),
+            rgba(248, 208, 149, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny:hover.gold-two {
+    -webkit-filter: saturate(110%) brightness(1.15);
+    filter: saturate(110%) brightness(1.15);
+}
+
+.button-shiny.foil {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+
+    background: conic-gradient(from -89deg at 50% 50%,
+            rgba(121, 115, 108, 1) 0%,
+            rgba(135, 132, 132, 1) 12.5%,
+            rgba(121, 115, 108, 1) 25%,
+            rgba(135, 132, 132, 1) 37.5%,
+            rgba(121, 115, 108, 1) 47%,
+            rgba(185, 214, 228, 1) 50%,
+            rgba(168, 165, 186, 1) 54%,
+            rgba(130, 139, 148, 1) 57%,
+            rgba(130, 139, 148, 1) 60%,
+            rgba(237, 199, 214, 1) 64%,
+            rgba(244, 198, 182, 1) 67%,
+            rgba(239, 239, 201, 1) 70%,
+            rgba(222, 233, 203, 1) 74%,
+            rgba(131, 144, 152, 1) 79%,
+            rgba(131, 144, 152, 1) 83%,
+            rgba(244, 198, 182, 1) 88%,
+            rgba(239, 239, 201, 1) 91%,
+            rgba(222, 233, 203, 1) 93%,
+            rgba(130, 141, 159, 1) 98%,
+            rgba(121, 115, 108, 1) 100%);
+
+    background: conic-gradient(from -89deg at 50% 50%,
+            rgba(120, 151, 180, 1) 0%,
+            rgba(120, 140, 165, 1) 12%,
+            rgba(202, 194, 212, 1) 16%,
+            rgba(213, 214, 220, 1) 21%,
+            rgba(148, 161, 202, 1) 26%,
+            rgba(120, 140, 165, 1) 31%,
+            rgba(120, 151, 180, 1) 50%,
+            rgba(199, 192, 212, 1) 52%,
+            rgba(220, 227, 220, 1) 66%,
+            rgba(197, 232, 254, 1) 82%,
+            rgba(195, 186, 241, 1) 96%,
+            rgba(120, 151, 180, 1) 100%);
+
+    background: conic-gradient(from -303deg at 50% 63%,
+            rgba(193, 200, 209, 1) 0%,
+            rgba(253, 253, 253, 1) 3%,
+            rgba(253, 253, 253, 1) 9%,
+            rgba(193, 200, 209, 1) 17%,
+            rgba(253, 253, 253, 1) 25%,
+            rgba(193, 200, 209, 1) 34%,
+            rgba(253, 253, 253, 1) 41%,
+            rgba(193, 200, 209, 1) 46%,
+            rgba(193, 200, 209, 1) 50%,
+            rgba(193, 200, 209, 1) 53%,
+            rgba(253, 253, 253, 1) 55%,
+            rgba(161, 167, 175, 1) 60%,
+            rgba(239, 213, 202, 1) 65%,
+            rgba(241, 238, 211, 1) 70%,
+            rgba(221, 237, 225, 1) 75%,
+            rgba(213, 226, 220, 1) 80%,
+            rgba(219, 224, 235, 1) 85%,
+            rgba(247, 225, 232, 1) 90%,
+            rgba(253, 253, 253, 1) 95%,
+            rgba(193, 200, 209, 1) 100%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny:hover.foil {
+    -webkit-filter: saturate(110%) brightness(1.05);
+    filter: saturate(110%) brightness(1.05);
+}
+
+.button-shiny.maroon-two {
+    background: rgba(100, 40, 58, 1);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.apple-green {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+
+    background: linear-gradient(rgba(202, 255, 85, 1) 0%,
+            rgba(55, 170, 0, 1) 90%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.foil-two {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+
+    background: conic-gradient(from -607deg at 50% 50%,
+            rgba(197, 249, 226, 1) 0%,
+            rgba(181, 207, 244, 1) 16.66%,
+            rgba(203, 203, 253, 1) 33.32%,
+            rgba(255, 234, 235, 1) 49.98%,
+            rgba(205, 253, 246, 1) 66.64%,
+            rgba(175, 217, 245, 1) 83.3%,
+            rgba(197, 249, 226, 1) 100%);
+
+    background: radial-gradient(50% 123.47% at 50% 50%, rgba(0, 255, 148, 1) 0%, rgba(255, 0, 199, 1) 100%),
+        linear-gradient(121.28deg, rgba(33, 49, 0, 1) 0%, rgba(255, 0, 0, 1) 100%),
+        linear-gradient(360deg, rgba(0, 41, 255, 1) 0%, rgba(143, 255, 0, 1) 100%),
+        linear-gradient(114.9deg, rgba(0, 198, 162, 1) 0%, rgba(106, 69, 168, 1) 100%),
+        radial-gradient(100% 148.07% at 0% 0%, rgba(255, 255, 255, 1) 0%, rgba(29, 205, 0, 1) 100%);
+    background-blend-mode: screen, color-dodge, overlay, difference, normal;
+
+    background:
+        conic-gradient(from 180deg at 50% 50%,
+            rgba(0, 0, 0, 1) 0deg,
+            rgba(255, 255, 255, 0.7) 17deg,
+            rgba(0, 0, 0, 1) 88deg,
+            rgba(255, 255, 255, 0.7) 152deg,
+            rgba(0, 0, 0, 1) 225deg,
+            rgba(255, 255, 255, 0.7) 289deg,
+            rgba(0, 0, 0, 1) 360deg),
+        conic-gradient(from 180deg at 50% 50%,
+            rgba(0, 0, 0, 1) 0deg,
+            rgba(255, 255, 255, 1) 30deg,
+            rgba(0, 0, 0, 1) 96deg,
+            rgba(255, 255, 255, 1) 169deg,
+            rgba(0, 0, 0, 1) 229deg,
+            rgba(255, 255, 255, 1) 285deg,
+            rgba(0, 0, 0, 1) 360deg),
+        radial-gradient(88% 127% at 13% 13%,
+            rgba(248, 110, 251, 1) 8%,
+            rgba(115, 66, 255, 1) 35%,
+            rgba(66, 232, 255, 1) 63%,
+            rgba(66, 255, 107, 1) 100%);
+    background-blend-mode: screen, difference, normal;
+
+    background: linear-gradient(130deg,
+            rgba(232, 255, 0, 1) 10%,
+            rgba(128, 255, 127, 1) 20%,
+            rgba(4, 251, 255, 1) 40%,
+            rgba(99, 156, 255, 1) 60%,
+            rgba(136, 119, 255, 1) 80%,
+            rgba(244, 24, 244, 1) 90%);
+    background-blend-mode: normal;
+
+    background:
+        conic-gradient(from 252deg at 50% 50%,
+            rgba(228, 228, 228, 1),
+            rgba(0, 0, 0, 1),
+            rgba(228, 228, 228, 1),
+            rgba(0, 0, 0, 1),
+            rgba(228, 228, 228, 1),
+            rgba(0, 0, 0, 1),
+            rgba(228, 228, 228, 1),
+            rgba(0, 0, 0, 1),
+            rgba(228, 228, 228, 1)),
+        conic-gradient(from 249deg at 50% 50%,
+            rgba(228, 228, 228, 1),
+            rgba(0, 0, 0, 1),
+            rgba(228, 228, 228, 1),
+            rgba(0, 0, 0, 1),
+            rgba(228, 228, 228, 1),
+            rgba(0, 0, 0, 1),
+            rgba(228, 228, 228, 1),
+            rgba(0, 0, 0, 1),
+            rgba(228, 228, 228, 1)),
+        linear-gradient(132deg,
+            rgba(182, 246, 174, 1) 16%,
+            rgba(249, 193, 161, 1) 22.8%,
+            rgba(231, 132, 187, 1) 29.6%,
+            rgba(174, 129, 228, 1) 36.4%,
+            rgba(124, 194, 246, 1) 43.2%,
+            rgba(129, 232, 222, 1) 50%,
+            rgba(124, 194, 246, 1) 56.8%,
+            rgba(174, 129, 228, 1) 63.60%,
+            rgba(231, 132, 187, 1) 70.4%,
+            rgba(249, 193, 161, 1) 77.2%,
+            rgba(182, 246, 174, 1) 84%),
+        linear-gradient(180deg,
+            rgba(255, 255, 255, 1),
+            rgba(0, 0, 0, 1));
+    background-blend-mode: screen, difference, hard-light, normal;
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny:hover.foil-two {
+    -webkit-filter: saturate(.85) brightness(1.2);
+    filter: saturate(.85) brightness(1.2);
+}
+
+.button-shiny.orange-red {
+    background: linear-gradient(110deg,
+            rgba(255, 166, 0, 1) 14.7%,
+            rgba(255, 99, 97, 1) 73%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.sunset-two {
+    background: linear-gradient(122deg,
+            rgba(251, 199, 212, 1),
+            rgba(151, 150, 240, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.grape {
+    background: linear-gradient(122deg,
+            rgba(15, 23, 42, 1),
+            rgba(76, 29, 149, 1),
+            rgba(15, 23, 42, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.blue-four {
+    background: linear-gradient(200deg,
+            rgba(29, 145, 252, 1),
+            rgba(90, 54, 192, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.samon {
+    background: linear-gradient(200deg,
+            rgba(242, 136, 133, 1),
+            rgba(233, 79, 102, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.gree-blue {
+    background: linear-gradient(200deg,
+            rgba(101, 187, 118, 1),
+            rgba(70, 111, 171, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.pink {
+    background: linear-gradient(200deg,
+            rgba(227, 5, 113, 1),
+            rgba(139, 1, 52, 1));
+
+    background: linear-gradient(200deg,
+            rgba(255, 0, 192, 1),
+            rgba(255, 0, 93, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.mint {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+    background: linear-gradient(143deg,
+            rgba(223, 254, 141, 1),
+            rgba(62, 213, 187, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.dark-blue {
+    background: linear-gradient(122deg,
+            rgba(11, 48, 67, 1),
+            rgba(4, 77, 122, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.gold-three {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.2);
+
+    background: radial-gradient(100% 100% at 50% 13%,
+            rgba(252, 242, 198, 1) 10%,
+            rgba(239, 223, 181, 1) 20%,
+            rgba(237, 223, 174, 1) 30%,
+            rgba(213, 192, 143, 1) 45%,
+            rgba(160, 139, 96, 1) 65%,
+            rgba(158, 136, 94, 1) 80%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.holo {
+    background:
+        conic-gradient(from 180deg at 50% 50%,
+            rgba(0, 0, 0, 1) 0deg,
+            rgba(255, 255, 255, 0.7) 17deg,
+            rgba(0, 0, 0, 1) 88deg,
+            rgba(255, 255, 255, 0.7) 152deg,
+            rgba(0, 0, 0, 1) 225deg,
+            rgba(255, 255, 255, 0.7) 289deg,
+            rgba(0, 0, 0, 1) 360deg),
+        conic-gradient(from 180deg at 50% 50%,
+            rgba(0, 0, 0, 1) 0deg,
+            rgba(255, 255, 255, 1) 30deg,
+            rgba(0, 0, 0, 1) 96deg,
+            rgba(255, 255, 255, 1) 169deg,
+            rgba(0, 0, 0, 1) 229deg,
+            rgba(255, 255, 255, 1) 285deg,
+            rgba(0, 0, 0, 1) 360deg),
+        radial-gradient(88% 127% at 13% 13%,
+            rgba(248, 110, 251, 1) 8%,
+            rgba(115, 66, 255, 1) 35%,
+            rgba(66, 232, 255, 1) 63%,
+            rgba(66, 255, 107, 1) 100%);
+    background-blend-mode: screen, difference, normal;
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.holo-two {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+    background:
+        radial-gradient(50% 123.47% at 50% 50%,
+            rgba(0, 255, 148, 1) 0%,
+            rgba(255, 0, 199, 1) 100%),
+        linear-gradient(121.28deg,
+            rgba(33, 49, 0, 1) 0%,
+            rgba(255, 0, 0, 1) 100%),
+        linear-gradient(360deg,
+            rgba(0, 41, 255, 1) 0%,
+            rgba(143, 255, 0, 1) 80%),
+        linear-gradient(114.9deg,
+            rgba(0, 198, 162, 1) 0%,
+            rgba(106, 69, 168, 1) 100%),
+        radial-gradient(100% 148.07% at 0% 0%,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(29, 205, 0, 1) 70%);
+    background-blend-mode: screen, color-dodge, overlay, difference, normal;
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.holo-three {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+    background:
+        conic-gradient(from 249deg at 50% 50%,
+            rgba(0, 255, 255, 1),
+            rgba(255, 0, 255, 1),
+            rgba(255, 255, 0, 1),
+            rgba(0, 255, 255, 1));
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.holo-four {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+    background:
+        conic-gradient(from 2deg at 50% 50%,
+            rgba(128, 232, 221, 1),
+            rgba(124, 194, 246, 1),
+            rgba(175, 129, 228, 1),
+            rgba(231, 132, 186, 1),
+            rgba(249, 193, 160, 1),
+            rgba(183, 246, 175, 1),
+            rgb(128, 232, 221, 1));
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.sunrise-grad {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+    background:
+        radial-gradient(73% 101% at 95.54% 95.05%,
+            rgba(255, 156, 65, 0.78) 0%,
+            rgba(255, 168, 88, 0) 120%),
+        linear-gradient(197deg,
+            rgba(255, 240, 164, 1) 0%,
+            rgba(255, 240, 164, 0) 120%),
+        radial-gradient(59% 74% at 10% -10%,
+            rgba(49, 132, 255, 0.8) 0%,
+            rgba(56, 75, 246, 0.21) 52%,
+            rgba(62, 246, 246, 0) 120%),
+        linear-gradient(143deg,
+            rgba(62, 158, 246, 1) 0%,
+            rgba(238, 43, 183, 0.33) 30%,
+            rgba(246, 62, 106, 0) 56%),
+        linear-gradient(288deg,
+            rgba(217, 155, 255, 1) 33%,
+            rgba(217, 170, 221, 0) 97%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.dark-metal {
+    background:
+        conic-gradient(from 76deg at 50% 50%,
+            rgba(19, 11, 26, 1) 0%,
+            rgba(105, 122, 103, 1) 7%,
+            rgba(83, 65, 113, 1) 14%,
+            rgba(19, 11, 26, 1) 21%,
+            rgba(148, 113, 172, 1) 28%,
+            rgba(48, 38, 74, 1) 35%,
+            rgba(78, 76, 129, 1) 42%,
+            rgba(143, 219, 239, 1) 49%,
+            rgba(245, 245, 251, 1) 56%,
+            rgba(121, 128, 198, 1) 63%,
+            rgba(43, 41, 46, 1) 70%,
+            rgba(162, 161, 153, 1) 77%,
+            rgba(245, 242, 223, 1) 84%,
+            rgba(103, 78, 96, 1) 91%,
+            rgba(19, 11, 26, 1) 100%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.blue-green-two {
+    background:
+        linear-gradient(45deg,
+            rgba(9, 0, 159, 1),
+            rgba(0, 255, 149, 1) 80%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.metal-two {
+    background: conic-gradient(from 66deg at 50% 50%,
+            rgba(199, 205, 204, 1),
+            rgba(185, 197, 207, 1),
+            rgba(218, 192, 162, 1),
+            rgba(116, 119, 119, 1),
+            rgba(130, 124, 114, 1),
+            rgba(63, 69, 68, 1),
+            rgba(129, 123, 112, 1),
+            rgba(216, 188, 150, 1),
+            rgba(65, 73, 66, 1),
+            rgba(33, 39, 41, 1),
+            rgba(84, 88, 94, 1),
+            rgba(227, 223, 210, 1),
+            rgba(209, 211, 207, 1),
+            rgba(118, 122, 125, 1),
+            rgba(199, 205, 204, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.spectrum {
+    background:
+        linear-gradient(rgba(255, 0, 0, 1), transparent),
+        linear-gradient(to top left, rgba(0, 255, 0, 1), transparent),
+        linear-gradient(to top right, rgba(0, 0, 255, 1), transparent);
+    background-blend-mode: screen;
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.spectrum-two {
+    background:
+        linear-gradient(rgba(0, 255, 255, 1),
+            transparent),
+        linear-gradient(-45deg,
+            rgba(255, 0, 255, 1),
+            transparent),
+        linear-gradient(45deg,
+            rgba(255, 255, 0, 1),
+            transparent);
+    background-blend-mode: multiply;
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.iridescent-two {
+    background:
+        conic-gradient(from 283deg at 50% 50%,
+            rgba(52, 239, 145, 1),
+            rgba(52, 239, 215, 1),
+            rgba(52, 192, 239, 1),
+            rgba(52, 122, 239, 1),
+            rgba(52, 52, 239, 1),
+            rgba(122, 52, 239, 1),
+            rgba(192, 52, 239, 1),
+            rgba(239, 52, 215, 1),
+            rgba(239, 52, 145, 1),
+            rgba(52, 239, 145, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.dawn {
+    background:
+        linear-gradient(58.2deg,
+            rgba(40, 91, 212, 0.73) -3%,
+            rgba(171, 53, 163, 0.45) 49.3%,
+            rgba(255, 204, 112, 0.37) 97.7%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.aubergine {
+    background:
+        linear-gradient(to right,
+            rgba(97, 4, 95, 1),
+            rgba(170, 7, 107, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.flare {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+    background:
+        linear-gradient(to right,
+            rgba(245, 175, 25, 1),
+            rgba(241, 39, 17, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.wedding-day-blues {
+    background:
+        linear-gradient(to right,
+            rgba(255, 0, 128, 1),
+            rgba(255, 140, 0, 1),
+            rgba(64, 224, 208, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.atlas {
+    background:
+        linear-gradient(45deg,
+            rgba(75, 192, 200, 1),
+            rgba(199, 121, 208, 1),
+            rgba(254, 172, 94, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.cherry {
+    background:
+        linear-gradient(45deg,
+            rgba(244, 92, 67, 1),
+            rgba(235, 51, 73, 1));
+
+    background:
+        linear-gradient(45deg,
+            rgba(118, 3, 7, 1),
+            rgba(239, 43, 107, 1));
+
+    background:
+        linear-gradient(45deg,
+            rgba(160, 1, 86, 1) 25%,
+            rgba(95, 13, 29, 1),
+            rgba(42, 11, 6, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.blue-pink {
+    background:
+        linear-gradient(105.5deg,
+            rgba(31, 212, 248, 1) 11%,
+            rgba(218, 15, 183, 1) 74.9%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.sunset-two {
+    background:
+        linear-gradient(43deg,
+            rgba(65, 88, 208, 1) 0%,
+            rgba(200, 80, 192, 1) 46%,
+            rgba(255, 204, 112, 1) 100%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.iridescent-three {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+    background:
+        conic-gradient(from 17deg at 50% 50%,
+            rgba(115, 162, 229, 1),
+            rgba(5, 249, 213, 1),
+            rgba(115, 162, 229, 1),
+            rgba(184, 33, 237, 1),
+            rgba(199, 25, 176, 1),
+            rgba(249, 3, 52, 1),
+            rgba(249, 180, 49, 1),
+            rgba(213, 88, 239, 1),
+            rgba(115, 162, 229, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.plum {
+    background:
+        linear-gradient(-30deg,
+            rgba(29, 18, 47, 1),
+            rgba(86, 14, 73, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.yellow-pink {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+    background:
+        linear-gradient(32deg,
+            rgba(225, 176, 60, 1),
+            rgba(241, 75, 172, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+/*
+metal gradient
+linear-gradient(
+	to top, 
+	rgba(254, 254, 254, 1), 
+	rgba(170, 170, 170, 1)
+);
+
+metal main
+linear-gradient(
+	to bottom, 
+	rgba(245, 245, 245, 1), 
+	rgba(221, 221, 221, 1)
+);
+*/
+
+.button-shiny.other-grad {
+    background:
+        linear-gradient(32deg,
+            rgba(254, 0, 248, 1),
+            rgba(156, 68, 250, 1),
+            rgba(75, 122, 252, 1),
+            rgba(2, 184, 223, 1),
+            rgba(15, 224, 96, 1),
+            rgba(22, 254, 3, 1));
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.light-two {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+    background:
+        linear-gradient(180deg,
+            rgba(238, 238, 238, 1) 46%,
+            rgba(176, 175, 174, 1) 48%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.holo-five {
+    background:
+        conic-gradient(from 105deg at 50% 50%,
+            rgba(95, 98, 193, 1),
+            /* purple */
+            rgba(79, 126, 216, 1),
+            /* blue */
+            rgba(55, 231, 246, 1),
+            /* aqua */
+            rgba(108, 255, 210, 1),
+            /* green blue */
+            rgba(124, 255, 185, 1),
+            /* green 1 */
+            rgba(192, 255, 145, 1),
+            /* green 2 */
+            rgba(255, 242, 150, 1),
+            /* yellow */
+            rgba(255, 186, 121, 1),
+            /* orange */
+            rgba(253, 151, 146, 1),
+            /* red */
+            rgba(237, 168, 225, 1),
+            /* purple pink */
+            rgba(255, 153, 222, 1),
+            /* pink */
+            rgba(250, 200, 175, 1),
+            /* orange 2 */
+            rgba(250, 255, 143, 1),
+            /* yellow 2 */
+            rgba(176, 255, 151, 1),
+            /* green 3 */
+            rgba(121, 255, 236, 1),
+            /* aqua teal */
+            rgba(79, 126, 216, 1),
+            /* blue */
+            rgba(95, 98, 193, 1)
+            /* purple */
+        ),
+        conic-gradient(from 269deg at 50% 50%,
+            rgba(95, 98, 193, 1),
+            /* purple */
+            rgba(79, 126, 216, 1),
+            /* blue */
+            rgba(55, 231, 246, 1),
+            /* aqua */
+            rgba(108, 255, 210, 1),
+            /* green blue */
+            rgba(124, 255, 185, 1),
+            /* green 1 */
+            rgba(192, 255, 145, 1),
+            /* green 2 */
+            rgba(255, 242, 150, 1),
+            /* yellow */
+            rgba(255, 186, 121, 1),
+            /* orange */
+            rgba(253, 151, 146, 1),
+            /* red */
+            rgba(237, 168, 225, 1),
+            /* purple pink */
+            rgba(255, 153, 222, 1),
+            /* pink */
+            rgba(250, 200, 175, 1),
+            /* orange 2 */
+            rgba(250, 255, 143, 1),
+            /* yellow 2 */
+            rgba(176, 255, 151, 1),
+            /* green 3 */
+            rgba(121, 255, 236, 1),
+            /* aqua teal */
+            rgba(79, 126, 216, 1),
+            /* blue */
+            rgba(95, 98, 193, 1)
+            /* purple */
+        );
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+    background-blend-mode: color-burn, normal;
+}
+
+.button-shiny.golden {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+    background:
+        linear-gradient(0deg,
+            rgba(249, 113, 9, 1) 0%,
+            rgba(236, 155, 33, 1) 35%,
+            rgba(255, 185, 19, 1) 100%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.button-shiny.holo-six {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+    background:
+        /* holo colors */
+        conic-gradient(from 90deg at 50% 50%,
+            rgba(125, 180, 215, 1),
+            /* blue */
+            rgba(119, 118, 160, 1),
+            /* purple */
+            rgba(203, 141, 168, 1),
+            /* pink */
+            rgba(213, 136, 111, 1),
+            /* orange */
+            rgba(227, 218, 150, 1),
+            /* yellow */
+            rgba(133, 176, 145, 1)
+            /* green */
+        ),
+        conic-gradient(from 60deg at 50% 50%,
+            rgba(0, 0, 0, 1),
+            rgba(255, 255, 255, 1),
+            rgba(0, 0, 0, 1),
+            rgba(255, 255, 255, 1),
+            rgba(0, 0, 0, 1),
+            rgba(255, 255, 255, 1),
+            rgba(0, 0, 0, 1),
+            rgba(255, 255, 255, 1),
+            rgba(0, 0, 0, 1),
+            rgba(255, 255, 255, 1),
+            rgba(0, 0, 0, 1)),
+        conic-gradient(from -196deg at 50% 50%,
+            rgba(0, 0, 0, 1),
+            rgba(255, 255, 249, 1),
+            rgba(0, 0, 0, 1),
+            rgba(255, 255, 255, 1),
+            rgba(0, 0, 0, 1),
+            rgba(255, 255, 255, 1),
+            rgba(0, 0, 0, 1),
+            rgba(255, 255, 255, 1),
+            rgba(0, 0, 0, 1),
+            rgba(255, 255, 255, 1),
+            rgba(0, 0, 0, 1)),
+        /* holo colors */
+        conic-gradient(from 358deg at 50% 50%,
+            rgba(125, 180, 215, 1),
+            /* blue */
+            rgba(119, 118, 160, 1),
+            /* purple */
+            rgba(203, 141, 168, 1),
+            /* pink */
+            rgba(213, 136, 111, 1),
+            /* orange */
+            rgba(227, 218, 150, 1),
+            /* yellow */
+            rgba(133, 176, 145, 1)
+            /* green */
+        );
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+    background-blend-mode: hard-light, exclusion, soft-light, normal;
+}
+
+.artificial-nature {
+    background:
+        linear-gradient(140.54deg,
+            rgba(96, 141, 0, 1) 0%,
+            rgba(211, 0, 0, 1) 72.37%),
+        linear-gradient(58.72deg,
+            rgba(0, 41, 255, 1) 0%,
+            rgba(143, 255, 0, 1) 100%),
+        radial-gradient(100% 164.72% at 100% 100%,
+            rgba(97, 0, 255, 1) 0%,
+            rgba(0, 255, 87, 1) 100%),
+        radial-gradient(100% 148.07% at 0% 0%,
+            rgba(255, 245, 0, 1) 0%,
+            rgba(81, 213, 0, 1) 100%);
+
+    background-blend-mode: color-dodge, overlay, difference, normal;
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.holo-painting {
+    background:
+        radial-gradient(50% 200% at 50% 50%,
+            rgba(0, 255, 148, 1) 0%,
+            rgba(255, 0, 199, 1) 100%),
+        linear-gradient(121.28deg,
+            rgba(33, 49, 0, 1) 5%,
+            rgba(255, 0, 0, 1) 100%),
+        linear-gradient(360deg,
+            rgba(0, 41, 255, 1) 0%,
+            rgba(143, 255, 0, 1) 80%),
+        linear-gradient(160deg,
+            rgba(0, 198, 162, 1) 10%,
+            rgba(106, 69, 168, 1) 100%),
+        radial-gradient(100% 250% at 0% 0%,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(29, 205, 0, 1) 100%);
+
+    background-blend-mode: screen, color-dodge, overlay, difference, normal;
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+    filter: saturate(160%) brightness(1);
+}
+
+.cmy-coloring {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+    background:
+        linear-gradient(68deg,
+            rgba(255, 0, 255, 1) 10%,
+            /* magenta */
+            rgba(0, 255, 255, 1),
+            /* cyan */
+            rgba(180, 255, 75, 1),
+            /* green */
+            rgba(255, 165, 90, 1),
+            /* orange */
+            rgba(255, 0, 255, 1) 90%);
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+}
+
+.pastel-two {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+    background:
+        conic-gradient(from 153deg at 50% 50%,
+            rgba(242, 239, 230, 1),
+            /* yellow */
+            rgba(255, 214, 194, 1),
+            /* orange */
+            rgba(250, 209, 209, 1),
+            /* pink */
+            rgba(197, 179, 219, 1),
+            /* purple */
+            rgba(196, 215, 232, 1),
+            /* blue */
+            rgba(198, 239, 233, 1),
+            /* aqua */
+            rgba(241, 239, 228, 1),
+            /* yellow */
+            rgba(227, 210, 229, 1),
+            /* purple */
+            rgba(246, 197, 219, 1),
+            /* pink */
+            rgba(198, 165, 230, 1),
+            /* darker purple */
+            rgba(190, 228, 251, 1),
+            /* blue */
+            rgba(207, 231, 243, 1),
+            /* lighter blue */
+            rgba(242, 239, 230, 1)
+            /* yellow */
+        );
+
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: center center;
+    filter: saturate(160%) brightness(1);
+}
+
+.holo-seven {
+    color: rgba(32, 32, 33, 1);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8), 0 -1px 2px rgba(255, 255, 255, 0.35);
+    background:
+        linear-gradient(0deg,
+            rgba(67, 67, 67, 1),
+            rgba(110, 110, 110, 1)),
+        linear-gradient(-37deg,
+            rgb(194, 255, 182),
+            /* green yellow */
+            rgb(255, 163, 182),
+            /* pink red */
+            rgb(221, 169, 255),
+            /* purple */
+            rgb(162, 209, 255)
+            /* blue */
+        ),
+        linear-gradient(-116deg,
+            rgb(194, 255, 182),
+            /* green yellow */
+            rgb(255, 163, 182),
+            /* pink red */
+            rgb(221, 169, 255),
+            /* purple */
+            rgb(162, 209, 255)
+            /* blue */
+        );
+
+    background-repeat: no-repeat, no-repeat;
+    background-size: 110% 120%, 275% 120%;
+    background-position: center center, 0% center, 100% center;
+    background-blend-mode: color-burn, hard-light, normal;
+    filter: saturate(160%) brightness(1);
+    transition: background 500ms ease;
+}
+
+.holo-seven:hover {
+    background-position: center center, 100% center, 0% center;
+}
+
+@keyframes buttonGradientMove {
+    50% {
+        background-position: 100% 0, 100% 0;
+    }
+}
+
+@-webkit-keyframes buttonGradientMove {
+    50% {
+        background-position: 100% 0, 100% 0;
+    }
+}
+
+@keyframes cdRotate {
+    0% {
+        border-radius: var(--borderRadius);
+        --conicAngle: 130deg;
+        background: conic-gradient(from var(--conicAngle) at 50% 50%, rgba(255, 255, 255, 1),
+                rgba(245, 225, 246, 1),
+                rgba(255, 239, 209, 1),
+                rgba(254, 254, 197, 1),
+                rgba(200, 200, 200, 1),
+                rgba(138, 138, 138, 1),
+                rgba(96, 88, 89, 1),
+                rgba(112, 72, 100, 1),
+                rgba(59, 73, 172, 1),
+                rgba(49, 200, 222, 1),
+                rgba(108, 211, 153, 1),
+                rgba(208, 208, 208, 1),
+                rgba(252, 252, 252, 1),
+                rgba(255, 255, 255, 1),
+                rgba(255, 255, 255, 1),
+                rgba(234, 250, 233, 1),
+                rgba(163, 255, 239, 1),
+                rgba(152, 188, 234, 1),
+                rgba(153, 151, 164, 1),
+                rgba(134, 134, 134, 1),
+                rgba(118, 118, 118, 1),
+                rgba(240, 237, 91, 1),
+                rgba(226, 163, 167, 1),
+                rgba(212, 212, 212, 1),
+                rgba(255, 255, 255, 1),
+                rgba(255, 255, 255, 1));
+    }
+
+    25% {
+        border-radius: var(--borderRadius);
+        --conicAngle: 70deg;
+        background: conic-gradient(from var(--conicAngle) at 50% 50%, rgba(255, 255, 255, 1),
+                rgba(245, 225, 246, 1),
+                rgba(255, 239, 209, 1),
+                rgba(254, 254, 197, 1),
+                rgba(200, 200, 200, 1),
+                rgba(138, 138, 138, 1),
+                rgba(96, 88, 89, 1),
+                rgba(112, 72, 100, 1),
+                rgba(59, 73, 172, 1),
+                rgba(49, 200, 222, 1),
+                rgba(108, 211, 153, 1),
+                rgba(208, 208, 208, 1),
+                rgba(252, 252, 252, 1),
+                rgba(255, 255, 255, 1),
+                rgba(255, 255, 255, 1),
+                rgba(234, 250, 233, 1),
+                rgba(163, 255, 239, 1),
+                rgba(152, 188, 234, 1),
+                rgba(153, 151, 164, 1),
+                rgba(134, 134, 134, 1),
+                rgba(118, 118, 118, 1),
+                rgba(240, 237, 91, 1),
+                rgba(226, 163, 167, 1),
+                rgba(212, 212, 212, 1),
+                rgba(255, 255, 255, 1),
+                rgba(255, 255, 255, 1));
+    }
+
+    50% {
+        border-radius: var(--borderRadius);
+        --conicAngle: 10deg;
+        background: conic-gradient(from var(--conicAngle) at 50% 50%, rgba(255, 255, 255, 1),
+                rgba(245, 225, 246, 1),
+                rgba(255, 239, 209, 1),
+                rgba(254, 254, 197, 1),
+                rgba(200, 200, 200, 1),
+                rgba(138, 138, 138, 1),
+                rgba(96, 88, 89, 1),
+                rgba(112, 72, 100, 1),
+                rgba(59, 73, 172, 1),
+                rgba(49, 200, 222, 1),
+                rgba(108, 211, 153, 1),
+                rgba(208, 208, 208, 1),
+                rgba(252, 252, 252, 1),
+                rgba(255, 255, 255, 1),
+                rgba(255, 255, 255, 1),
+                rgba(234, 250, 233, 1),
+                rgba(163, 255, 239, 1),
+                rgba(152, 188, 234, 1),
+                rgba(153, 151, 164, 1),
+                rgba(134, 134, 134, 1),
+                rgba(118, 118, 118, 1),
+                rgba(240, 237, 91, 1),
+                rgba(226, 163, 167, 1),
+                rgba(212, 212, 212, 1),
+                rgba(255, 255, 255, 1),
+                rgba(255, 255, 255, 1));
+    }
+
+    100% {
+        border-radius: var(--borderRadius);
+        --conicAngle: -50deg;
+        background: conic-gradient(from var(--conicAngle) at 50% 50%, rgba(255, 255, 255, 1),
+                rgba(245, 225, 246, 1),
+                rgba(255, 239, 209, 1),
+                rgba(254, 254, 197, 1),
+                rgba(200, 200, 200, 1),
+                rgba(138, 138, 138, 1),
+                rgba(96, 88, 89, 1),
+                rgba(112, 72, 100, 1),
+                rgba(59, 73, 172, 1),
+                rgba(49, 200, 222, 1),
+                rgba(108, 211, 153, 1),
+                rgba(208, 208, 208, 1),
+                rgba(252, 252, 252, 1),
+                rgba(255, 255, 255, 1),
+                rgba(255, 255, 255, 1),
+                rgba(234, 250, 233, 1),
+                rgba(163, 255, 239, 1),
+                rgba(152, 188, 234, 1),
+                rgba(153, 151, 164, 1),
+                rgba(134, 134, 134, 1),
+                rgba(118, 118, 118, 1),
+                rgba(240, 237, 91, 1),
+                rgba(226, 163, 167, 1),
+                rgba(212, 212, 212, 1),
+                rgba(255, 255, 255, 1),
+                rgba(255, 255, 255, 1));
+    }
+}
+
+@-webkit-keyframes cdRotate {
+    0% {
+        border-radius: var(--borderRadius);
+        --conicAngle: 130deg;
+        background: conic-gradient(from var(--conicAngle) at 50% 50%, rgba(255, 255, 255, 1),
+                rgba(245, 225, 246, 1),
+                rgba(255, 239, 209, 1),
+                rgba(254, 254, 197, 1),
+                rgba(200, 200, 200, 1),
+                rgba(138, 138, 138, 1),
+                rgba(96, 88, 89, 1),
+                rgba(112, 72, 100, 1),
+                rgba(59, 73, 172, 1),
+                rgba(49, 200, 222, 1),
+                rgba(108, 211, 153, 1),
+                rgba(208, 208, 208, 1),
+                rgba(252, 252, 252, 1),
+                rgba(255, 255, 255, 1),
+                rgba(255, 255, 255, 1),
+                rgba(234, 250, 233, 1),
+                rgba(163, 255, 239, 1),
+                rgba(152, 188, 234, 1),
+                rgba(153, 151, 164, 1),
+                rgba(134, 134, 134, 1),
+                rgba(118, 118, 118, 1),
+                rgba(240, 237, 91, 1),
+                rgba(226, 163, 167, 1),
+                rgba(212, 212, 212, 1),
+                rgba(255, 255, 255, 1),
+                rgba(255, 255, 255, 1));
+    }
+
+    25% {
+        border-radius: var(--borderRadius);
+        --conicAngle: 70deg;
+        background: conic-gradient(from var(--conicAngle) at 50% 50%, rgba(255, 255, 255, 1),
+                rgba(245, 225, 246, 1),
+                rgba(255, 239, 209, 1),
+                rgba(254, 254, 197, 1),
+                rgba(200, 200, 200, 1),
+                rgba(138, 138, 138, 1),
+                rgba(96, 88, 89, 1),
+                rgba(112, 72, 100, 1),
+                rgba(59, 73, 172, 1),
+                rgba(49, 200, 222, 1),
+                rgba(108, 211, 153, 1),
+                rgba(208, 208, 208, 1),
+                rgba(252, 252, 252, 1),
+                rgba(255, 255, 255, 1),
+                rgba(255, 255, 255, 1),
+                rgba(234, 250, 233, 1),
+                rgba(163, 255, 239, 1),
+                rgba(152, 188, 234, 1),
+                rgba(153, 151, 164, 1),
+                rgba(134, 134, 134, 1),
+                rgba(118, 118, 118, 1),
+                rgba(240, 237, 91, 1),
+                rgba(226, 163, 167, 1),
+                rgba(212, 212, 212, 1),
+                rgba(255, 255, 255, 1),
+                rgba(255, 255, 255, 1));
+    }
+
+    50% {
+        border-radius: var(--borderRadius);
+        --conicAngle: 10deg;
+        background: conic-gradient(from var(--conicAngle) at 50% 50%, rgba(255, 255, 255, 1),
+                rgba(245, 225, 246, 1),
+                rgba(255, 239, 209, 1),
+                rgba(254, 254, 197, 1),
+                rgba(200, 200, 200, 1),
+                rgba(138, 138, 138, 1),
+                rgba(96, 88, 89, 1),
+                rgba(112, 72, 100, 1),
+                rgba(59, 73, 172, 1),
+                rgba(49, 200, 222, 1),
+                rgba(108, 211, 153, 1),
+                rgba(208, 208, 208, 1),
+                rgba(252, 252, 252, 1),
+                rgba(255, 255, 255, 1),
+                rgba(255, 255, 255, 1),
+                rgba(234, 250, 233, 1),
+                rgba(163, 255, 239, 1),
+                rgba(152, 188, 234, 1),
+                rgba(153, 151, 164, 1),
+                rgba(134, 134, 134, 1),
+                rgba(118, 118, 118, 1),
+                rgba(240, 237, 91, 1),
+                rgba(226, 163, 167, 1),
+                rgba(212, 212, 212, 1),
+                rgba(255, 255, 255, 1),
+                rgba(255, 255, 255, 1));
+    }
+
+    100% {
+        border-radius: var(--borderRadius);
+        --conicAngle: -50deg;
+        background: conic-gradient(from var(--conicAngle) at 50% 50%, rgba(255, 255, 255, 1),
+                rgba(245, 225, 246, 1),
+                rgba(255, 239, 209, 1),
+                rgba(254, 254, 197, 1),
+                rgba(200, 200, 200, 1),
+                rgba(138, 138, 138, 1),
+                rgba(96, 88, 89, 1),
+                rgba(112, 72, 100, 1),
+                rgba(59, 73, 172, 1),
+                rgba(49, 200, 222, 1),
+                rgba(108, 211, 153, 1),
+                rgba(208, 208, 208, 1),
+                rgba(252, 252, 252, 1),
+                rgba(255, 255, 255, 1),
+                rgba(255, 255, 255, 1),
+                rgba(234, 250, 233, 1),
+                rgba(163, 255, 239, 1),
+                rgba(152, 188, 234, 1),
+                rgba(153, 151, 164, 1),
+                rgba(134, 134, 134, 1),
+                rgba(118, 118, 118, 1),
+                rgba(240, 237, 91, 1),
+                rgba(226, 163, 167, 1),
+                rgba(212, 212, 212, 1),
+                rgba(255, 255, 255, 1),
+                rgba(255, 255, 255, 1));
+    }
+}

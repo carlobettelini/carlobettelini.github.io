@@ -1,0 +1,87 @@
+@media all and (max-width: 1300px) {
+    #footer {
+        justify-content: space-around;
+    }
+}
+
+
+/* Mobile-size viewports */
+
+@media (pointer: none),
+(pointer: coarse) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        padding-left: 0px;
+    }
+
+    #menu-button {
+        width: 70%;
+        height: 100%;
+    }
+
+    upper, lower {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .vimeo-media {
+        width: 90% !important;
+        height: 160px !important;
+    }
+
+    .instagram-media {
+        min-width: 200px !important;
+        width: 90% !important;
+    }
+
+    .youtube-media {
+        width: 90% !important;
+    }
+
+    .facebook-media {
+        width: 90% !important;
+        height: 100% !important;
+    }
+
+    #gallery {
+        text-align: center;
+    }
+
+    .game-gallery-item {
+        width: 90%;
+    }
+
+    .game-thumbnails {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .game-gallery-item h2 {
+        font-size: 1.5em;
+    }
+
+    #footer {
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    #footer p {
+        font-size: small;
+    }
+
+    #personal-info {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+}

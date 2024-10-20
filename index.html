@@ -3,200 +3,66 @@
 
 <head>
     <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/shiny-buttons.css" rel="stylesheet" />
     <link href="./css/media-size.css" rel="stylesheet" />
     <meta charset="UTF-8" />
-    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Carlo" content="portfolio">
+    <title>My portfolio</title>
 </head>
 
 <body>
     <script src="./js/header.js"></script>
-
     <div id="main-content">
-        <button id="openNav" onclick="w3_open()">&#9776;</button>
+        <upper>
+            <button id="menu-button" class="button-shiny copper">
+                <span class="shine"></span>
+                <a href="./html/movies.html">
+                    <h5>MOVIES</h5>
+                    <img src="./images/logos/movies.png">
+                </a>
+            </button>
+            <button id="menu-button" class="button-shiny silver">
+                <span class="shine"></span>
+                <a href="./html/games.html">
+                    <h5>GAMES</h5>
+                    <img src="./images/logos/games.png">
+                </a>
+            </button>
+            <button id="menu-button" class="button-shiny purple-orange">
+                <span class="shine"></span>
+                <a href="./html/software.html">
+                    <h5>SOFTWARE</h5>
+                    <img src="./images/logos/github.png">
+                </a>
+            </button>
+        </upper>
+        <lower>
+            <button id="menu-button" class="button-shiny sunrise">
+                <span class="shine"></span>
+                <a href="./html/instagram.html">
+                    <h5>INSTAGRAM</h5>
+                    <img src="./images/logos/instagram.png">
+                </a>
+            </button>
+            <button id="menu-button" class="button-shiny blue-three">
+                <span class="shine"></span>
+                <a href="./html/youtube.html">
+                    <h5>YOUTUBE</h5>
+                    <img src="./images/logos/youtube square.png">
+                </a>
+            </button>
+            <button id="menu-button" class="button-shiny gold">
+                <span class="shine"></span>
+                <a href="./html/facebook.html">
+                    <h5>FACEBOOK</h5>
+                    <img src="./images/logos/facebook_logo.png">
+                </a>
+            </button>
 
-
-        <div id="icon" style="padding-left: 30px; ">
-            <img width="50px " style="vertical-align:middle " src="./images/logos/movies.png " alt=" ">
-            <h3 style="vertical-align:middle; display: inline-block; padding-left: 10px; ">MOVIES</h3>
-        </div>
-        <div class="content">
-            <div id="info">
-                <iframe style="min-height: 315px;" src="https://player.vimeo.com/video/425501366?h=7eb1f697e7 "
-                    width="560 " height="315 " frameborder="0 " allow="autoplay; fullscreen; picture-in-picture "
-                    allowfullscreen></iframe>
-                <h4 class="title"><strong>Six Stringed Soul - Trailer</strong></h4>
-                <button class="collapsible">Show more...</button>
-                <div class="additional-infos">
-                    <p class="details"><em>2017, Switzerland, 27 min, Anna Schmid</em></p>
-                    <p class="info-movie">Andrea Bignasca, a young singer and musician from Ticino, has resumed
-                        writing after the success of his first album "Gone". Between concerts, home and work, the film
-                        follows Andrea's creative process, entering a mysterious and fascinating world in which music
-                        speaks.
-                    </p>
-                </div>
-            </div>
-            <div id="info">
-                <iframe src="https://player.vimeo.com/video/425467315?h=df7726f8f6 " width="560" height="315 "
-                    frameborder="0 " allow="autoplay; fullscreen; picture-in-picture " allowfullscreen></iframe>
-                <h4 class="title"><strong>Oltre il Confine - Trailer</strong></h4>
-                <button class="collapsible">Show more...</button>
-                <div class="additional-infos">
-                    <p class="details"><em>2016, Switzerland, 12 min, Daniele Lucca</em></p>
-                    <p class="info-movie">Three Italians with money problems try to do a robbery in Switzerland, in a
-                        petrol station where one of the three worked before being fired. They just glean a handful of
-                        francs. They are disappointed but feel hunted. The night on the run will lead them to discover
-                        more about themselves and it will bring them face to face with one of the most important
-                        decisions of their life: to cross the border or not.</p>
-                </div>
-            </div>
-            <div id="info">
-                <!-- L'eredità -->
-                <iframe width="560" height="315 " src="https://www.youtube.com/embed/N4lXAZC2rhk?si=1xRaza7jKeYM9prm"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-                <h4 class="title"><strong>L'eredità - Teaser</strong></h4>
-                <button class="collapsible">Show more...</button>
-                <div class="additional-infos">
-                    <p class="details"><em>2009, Switzerland, 59 min, Carlo Bettelini</em></p>
-                    <p class="info-movie">Lorem Ipsu</p>
-                </div>
-            </div>
-            <div id="info">
-                <!-- Lo Sceffa 2-->
-                <iframe width="560" height="315 " src="https://www.youtube.com/embed/VqeROjwfPC8?si=44e61uyl3RClZOdP"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-                <h4 class="title"><strong>Lo Sceffa 2 - Teaser</strong></h4>
-                <button class="collapsible">Show more...</button>
-                <div class="additional-infos">
-                    <p class="details"><em>2009, Switzerland, 59 min, Carlo Bettelini</em></p>
-                    <p class="info-movie">Lorem Ipsu</p>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="icon" style="padding-left: 30px; ">
-            <img width="50px " style="vertical-align:middle " src="./images/logos/short_film.png " alt=" ">
-            <h3 style="vertical-align:middle; display: inline-block; padding-left: 10px; ">SHORTS</h3>
-        </div>
-        <div class="shorts">
-            <!-- Autoritratto -->
-            <div id="info">
-                <iframe id="shorts" width="400" src="https://www.youtube.com/embed/bJWwyNt0Cj4?si=b315BfM98qs8oqjw"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-                <h4 class="title"><strong>Autoritratto Teaser</strong></h4>
-            </div>
-            <!-- Tempo -->
-            <div id="info">
-                <iframe id="shorts" width="400" src="https://www.youtube.com/embed/ulPuIXnXZEU?si=Ss6-iscanAS5RuUi"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-                <h4 class="title"><strong>Temuti sensi di colpa Teaser</strong></h4>
-            </div>
-            <!-- Dolls Sight -->
-            <div id="info">
-                <iframe id="shorts" width="400" src="https://www.youtube.com/embed/Dg2J7U-Zgsg?si=KolcKEHQGmuEw1SN"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-                <h4 class="title"><strong>The Dolls Sight Teaser</strong></h4>
-            </div>
-            <!-- Far away -->
-            <div id="info">
-                <iframe id="shorts" width="400" src="https://www.youtube.com/embed/pdJerJ4A5Ls?si=yesRtfHnoz5vcmT7"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-                <h4 class="title"><strong>Far away Teaser</strong></h4>
-            </div>
-            <!-- Il riflesso -->
-            <div id="info">
-                <iframe id="shorts" width="400" src="https://www.youtube.com/embed/DQSizHOwuxI?si=722mgsGDG7iS_Oa8"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-                <h4 class="title"><strong>Il riflesso Teaser</strong></h4>
-            </div>
-            <!-- Internalization -->
-            <div id="info">
-                <iframe id="shorts" width="400" src="https://www.youtube.com/embed/eLovBrJH6hw?si=4D4YiJb6-pSmWjfg"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-                <h4 class="title"><strong>Internalization Teaser</strong></h4>
-            </div>
-            <!-- ODB - Libertà -->
-            <div id="info">
-                <iframe id="shorts" width="400" src="https://www.youtube.com/embed/Bk_k2wtopas?si=lfyozDzNknz7I-vv"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-                <h4 class="title"><strong>ODB - Libertà Teaser</strong></h4>
-            </div>
-            <!-- ODB - Ti sei perso ragazzo -->
-            <div id="info">
-                <iframe id="shorts" width="400" src="https://www.youtube.com/embed/mrsoDESVE3A?si=KMTb7VLJPBVi0Ff-"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-                <h4 class="title"><strong>ODB - Ti sei perso ragazzo Teaser</strong></h4>
-            </div>
-        </div>
-
-
-        <div id="icon" style="padding-left: 30px; ">
-            <img width="50px " style="vertical-align:middle " src="./images/logos/animation.png" alt=" ">
-            <h3 style="vertical-align:middle; display: inline-block; padding-left: 10px; ">ANIMATIONS</h3>
-        </div>
-        <div class="gifs">
-            <img height="315" id="gif" src="./images/cookieguy.gif">
-            <img height="315" id="gif" src="./images/enigma.gif">
-            <img height="315" id="gif" src="./images/cup.gif">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/FOMLhWd651I?si=rh2N4_O1PWWN5f65"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/3SO7E3AdVUE?si=KUpGIXiMqHiCSkNY"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-        </div>
-
-
-        <div id="icon" style="padding-left: 30px;">
-            <img width="50px" style="vertical-align:middle" src="./images/logos/games.png" alt="">
-            <h3 style="vertical-align:middle; display: inline-block; padding-left: 10px;">GAMES</h3>
-        </div>
-        <div class="games">
-            <iframe id='webgl_iframe' frameborder="0 " mozallowfullscreen="true "
-                src="https://play.unity.com/webgl/8e81b929-6deb-4839-9901-6d7b00696aaa?screenshot=false&embedType=embed"
-                width="500" onmousewheel=" " webkitallowfullscreen="true "></iframe>
-            <iframe id='webgl_iframe' frameborder="0 " mozallowfullscreen="true "
-                src="https://play.unity.com/webgl/7018b72e-003e-4783-87aa-71b8cdbead20?screenshot=false&embedType=embed"
-                width="500" onmousewheel=" " webkitallowfullscreen="true "></iframe>
-            <iframe id='webgl_iframe' frameborder="0" mozallowfullscreen="true"
-                src="https://play.unity.com/webgl/bc273786-8c66-4110-be13-c235e1d43725?screenshot=false&embedType=embed"
-                width="500" onmousewheel="" webkitallowfullscreen="true"></iframe>
-            <iframe id='webgl_iframe' frameborder="0" mozallowfullscreen="true"
-                src="https://play.unity.com/webgl/91949abf-be27-4a8f-b898-37c9bf7c28d2?screenshot=false&embedType=embed"
-                width="500" onmousewheel="" webkitallowfullscreen="true"></iframe>
-        </div>
-
-
-        <div id="empty"></div>
+        </lower>
     </div>
-    </div>
-
     <script src="./js/footer.js "></script>
-
-    <script src="./js/script.js "></script>
 
 </body>
 
