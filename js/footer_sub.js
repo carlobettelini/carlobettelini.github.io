@@ -12,7 +12,7 @@ document.write(`
                     <p style="color: black; padding: 10px;">carlo.bettelini@gmail.com</p>
                 </div>
             </a>
-            <p style="padding: 10px;">© Carlo Bettelini, last page update 3 November 2024</p>
+            <p style="padding: 10px;">© Carlo Bettelini, last page update 11 February 2025</p>
         </div>
     </div>
 `);
